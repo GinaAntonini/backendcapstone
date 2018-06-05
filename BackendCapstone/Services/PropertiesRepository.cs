@@ -15,7 +15,7 @@ namespace BackendCapstone.Services
             {
                 db.Open();
 
-                var getPropertyList = db.Query<PropertiesDto>(@"SELECT Id, Name, TaxId, ManagerId, BoardId, Address, City, PropertyType, NumberOfBuildings, NumberOfUnits, GateAccessCode, FireAlarmPassword, OnSiteContact, WaterShutOffLocation, RoofType, ParkingPolicy, RoofAccessCode, FireAlarmVendorId, InsuranceVendorId, ElevatorVendorId, PlumbingVendorId, ElectricalVendorId, GateVendorId, TowingVendorId, EmergencyRemediationVendorId, ElectricUtilityCompanyId, WaterUtilityCompanyId, AdditionalNotes FROM Property");
+                var getPropertyList = db.Query<PropertiesDto>(@"SELECT Id, Name, AssociationCode, TaxId, ManagerId, BoardId, Address, City, PropertyType, NumberOfBuildings, NumberOfUnits, GateAccessCode, FireAlarmPassword, OnSiteContact, WaterShutOffLocation, RoofType, ParkingPolicy, RoofAccessCode, FireAlarmVendorId, InsuranceVendorId, ElevatorVendorId, PlumbingVendorId, ElectricalVendorId, GateVendorId, TowingVendorId, EmergencyRemediationVendorId, ElectricUtilityCompanyId, WaterUtilityCompanyId, AdditionalNotes FROM Property");
 
                 return getPropertyList;
 
@@ -35,6 +35,7 @@ namespace BackendCapstone.Services
                     
                 var records = db.Execute(@"INSERT INTO [dbo].[Property]
                                                      ([Name]
+                                                     ,[AssociationCode]
                                                      ,[TaxId]
                                                      ,[ManagerId]
                                                      ,[BoardId]
@@ -63,6 +64,7 @@ namespace BackendCapstone.Services
                                                      ,[AdditionalNotes])
                                                 VALUES
                                                      (@Name
+                                                     ,@AssociationCode
                                                      ,@TaxId
                                                      ,@ManagerId
                                                      ,@BoardId
@@ -91,6 +93,8 @@ namespace BackendCapstone.Services
                 return records == 1;
             }
         }
+
+
         
     }
 }
