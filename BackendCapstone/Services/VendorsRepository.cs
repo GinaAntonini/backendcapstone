@@ -47,5 +47,27 @@ namespace BackendCapstone.Services
             }
         }
 
+        public bool Edit(int id, VendorsDto vendor)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+
+                var edited = db.Execute(@"Update [dbo].[Vendor]
+                                                 SET [Name] = @Name
+                                                    ,[PhoneNumber] = @PhoneNumber
+                                                    ,[ContactName] = @ContactName
+                                                    ,[FieldOfWork] = @FieldOfWork
+                                                     WHERE [Id] = @Id", new
+                                                    {
+                                                        vendor.Name,
+                                                        vendor.PhoneNumber,
+                                                        vendor.ContactName,
+                                                        vendor.FieldOfWork,
+                                                        id
+                                                    });
+                return edited == 1; 
+            }
+        }
     }
 }
