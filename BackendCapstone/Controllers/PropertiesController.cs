@@ -31,5 +31,16 @@ namespace BackendCapstone.Controllers
                 return Request.CreateResponse(HttpStatusCode.Created);
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Property could not be added");
         }
+
+        [Route("{id}"), HttpPut]
+        public HttpResponseMessage EditProperty(int Id, PropertiesDto property)
+        {
+            var repository = new PropertiesRepository();
+            var result = repository.Edit(Id, property);
+
+            if(result)
+                return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Property could not be updated");
+        }
     }
 }

@@ -94,6 +94,49 @@ namespace BackendCapstone.Services
             }
         }
 
+        public bool Edit(int id, PropertiesDto property)
+        {
+            property.Id = id;
+
+            using (var db = GetConnection())
+            {
+                db.Open();
+
+                var edited = db.Execute(@"Update [dbo].[Property]
+                                                     SET [Name] = @Name
+                                                     ,[AssociationCode] = @AssociationCode
+                                                     ,[TaxId] = @TaxId
+                                                     ,[ManagerId] = @ManagerId
+                                                     ,[BoardId] = @BoardId
+                                                     ,[Address] = @Address
+                                                     ,[City] = @City
+                                                     ,[PropertyType] = @PropertyType
+                                                     ,[NumberOfBuildings] = @NumberOfBuildings
+                                                     ,[NumberOfUnits] = @NumberOfUnits
+                                                     ,[GateAccessCode] = @GateAccessCode
+                                                     ,[FireAlarmPassword] = @FireAlarmPassword
+                                                     ,[OnSiteContact] = @OnSiteContact
+                                                     ,[WaterShutOffLocation] = @WaterShutOffLocation
+                                                     ,[RoofType] = @RoofType
+                                                     ,[ParkingPolicy] = @ParkingPolicy
+                                                     ,[RoofAccessCode] = @RoofAccessCode
+                                                     ,[FireAlarmVendorId] = @FireAlarmVendorId
+                                                     ,[InsuranceVendorId] = @InsuranceVendorId
+                                                     ,[ElevatorVendorId] = @ElevatorVendorId
+                                                     ,[PlumbingVendorId] = @PlumbingVendorId
+                                                     ,[ElectricalVendorId] = @ElectricalVendorId
+                                                     ,[GateVendorId] = @GateVendorId
+                                                     ,[TowingVendorId] = @TowingVendorId
+                                                     ,[EmergencyRemediationVendorId] = @EmergencyRemediationVendorId
+                                                     ,[ElectricUtilityCompanyId] = @ElectricUtilityCompanyId
+                                                     ,[WaterUtilityCompanyId] = @WaterUtilityCompanyId 
+                                                     ,[AdditionalNotes] = @AdditionalNotes
+                                                     WHERE [Id] = @Id", property);
+
+                return edited == 1;
+            }
+        }
+
 
         
     }
