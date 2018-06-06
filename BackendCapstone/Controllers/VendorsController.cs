@@ -31,5 +31,16 @@ namespace BackendCapstone.Controllers
                 return Request.CreateResponse(HttpStatusCode.Created);
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Vendor could not be added");
         }
+
+        [Route("{id}"), HttpPut]
+        public HttpResponseMessage EditProperty(int Id, VendorsDto vendor)
+        {
+            var repository = new VendorsRepository();
+            var result = repository.Edit(Id, vendor);
+
+            if(result)
+                return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Vendor could not be updated");
+        }
     }
 }
