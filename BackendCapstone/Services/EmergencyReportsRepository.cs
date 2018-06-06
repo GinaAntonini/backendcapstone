@@ -41,5 +41,28 @@ namespace BackendCapstone.Services
                 return records == 1;
             }
         }
+
+        public bool Edit(int id, EmergencyReportsDto emergencyreport)
+        {
+            emergencyreport.Id = id;
+
+            using (var db = GetConnection())
+            {
+                db.Open();
+
+                var edited = db.Execute(@"Update [dbo].[EmergencyReport]
+                                                     SET [Date] = @Date
+                                                     ,[ManagerId] = @ManagerId
+                                                     ,[Caller] = @Caller
+                                                     ,[CallerPhoneNumber] = @CallerPhoneNumber
+                                                     ,[Address] = @Address
+                                                     ,[IncidentDescription] = @IncidentDescription
+                                                     ,[ActionTaken] = @ActionTaken
+                                                     ,[PropertyId] = @PropertyId
+                                                     WHERE [Id] = @Id", emergencyreport);
+
+                return edited == 1;
+            }
+        }
     }
 }

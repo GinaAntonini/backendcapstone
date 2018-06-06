@@ -24,5 +24,16 @@ namespace BackendCapstone.Controllers
                 return Request.CreateResponse(HttpStatusCode.Created);
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Could not create emergency report");
         }
+
+        [Route("{id}"), HttpPut]
+        public HttpResponseMessage EditEmergencyReport(int Id, EmergencyReportsDto emergencyreport)
+        {
+            var repository = new EmergencyReportsRepository();
+            var result = repository.Edit(Id, emergencyreport);
+
+            if (result)
+                return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Report could not be updated");
+        }
     }
 }
