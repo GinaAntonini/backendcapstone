@@ -1,0 +1,183 @@
+﻿<h3>Add New Property</h3>
+<form ng-submit="new(Property)" class="form-horizontal">
+    <div class="form-group">
+        <label for="Property.Name" class="control-label col-xs-4">Property Name</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.Name" id="Property.Name" name="Property.Name" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.AssociationCode" class="control-label col-xs-4">Association Code</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.AssociationCode" id="Property.AssociationCode" name="Property.AssociationCode" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.TaxId" class="control-label col-xs-4">Tax Id</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.TaxId" id="Employee.LastName" name="Employee.LastName" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.Address" class="control-label col-xs-4">Address</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.Address" id="Property.Address" name="Property.Address" type="text" class="form-control" required="required">
+        </div>
+        <label for="Property.City" class="control-label col-xs-4">City</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.City" id="Property.City" name="Property.City" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ManagerId" class="control-label col-xs-4">Manager</label>
+        <div class="col-xs-8">
+            <select ng-model="Property.ManagerId">
+                <option value="1">Glenn Carson</option>
+                <option value="2">Teddy Christenberry</option>
+                <option value="4">Tyler Hall</option>
+                <option value="5">Dawn Hardiman</option>
+                <option value="6">Terry Hardiman</option>
+                <option value="7">David Wall</option>
+                <option value="8">Todd Fuller</option>
+                <option value="8">Zach Johnson</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.PropertyType" class="control-label col-xs-4">Property Type</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.PropertyType" id="Property.PropertyType" name="Property.PropertyType" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.NumberOfUnits" class="control-label col-xs-4">Number Of Units</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.NumberOfUnits" id="Property.NumberOfUnits" name="Property.NumberOfUnits" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.NumberOfBuildings" class="control-label col-xs-4">Number of Buildings</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.NumberOfBuildings" id="Property.NumberOfBuildings" name="Property.NumberOfBuildings" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.GateAccessCode" class="control-label col-xs-4">Gate Access Code</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.GateAccessCode" id="Property.GateAccessCode" name="Property.GateAccessCode" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.FireAlarmPassword" class="control-label col-xs-4">Fire Alarm Password</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.FireAlarmPassword" id="Property.FireAlarmPassword" name="Property.FireAlarmPassword" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.OnSiteContact" class="control-label col-xs-4">On Site Contact</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.OnSiteContact" id="Property.OnSiteContact" name="Property.OnSiteContact" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.WaterShutOffLocation" class="control-label col-xs-4">Water Shut Off Location</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.WaterShutOffLocation" id="Property.WaterShutOffLocation" name="Property.WaterShutOffLocation" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.RoofType" class="control-label col-xs-4">Roof Type</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.RoofType" id="Property.RoofType" name="Property.RoofType" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ParkingPolicy" class="control-label col-xs-4">Parking Policy</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.ParkingPolicy" id="Property.ParkingPolicy" name="Property.ParkingPolicy" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.RoofAccessCode" class="control-label col-xs-4">RoofAccessCode</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.RoofAccessCode" id="Property.RoofAccessCode" name="Property.RoofAccessCode" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.FireAlarmVendorId" class="control-label col-xs-4">Fire Alarm Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.FireAlarmVendorId" id="Property.FireAlarmVendorId" name="Property.FireAlarmVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.InsuranceVendorId" class="control-label col-xs-4">Insurance Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.InsuranceVendorId" id="Property.InsuranceVendorId" name="Property.InsuranceVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ElevatorVendorId" class="control-label col-xs-4">Elevator Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.ElevatorVendorId" id="Property.ElevatorVendorId" name="Property.ElevatorVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.PlumbingVendorId" class="control-label col-xs-4">Plumbing Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.PlumbingVendorId" id="Property.PlumbingVendorId" name="Property.PlumbingVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.ElectricalVendorId" id="Property.ElectricalVendorId" name="Property.ElectricalVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.GateVendorId" class="control-label col-xs-4">Gate Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.GateVendorId" id="Property.GateVendorId" name="Property.GateVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.TowingVendorId" class="control-label col-xs-4">Towing Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.TowingVendorId" id="Property.TowingVendorId" name="Property.TowingVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.ElectricalVendorId" id="Property.ElectricalVendorId" name="Property.ElectricalVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.EmergencyRemediationVendorId" class="control-label col-xs-4">Emergency Remediation Vendor</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.EmergencyRemediationVendorId" id="Property.EmergencyRemediationVendorId" name="Property.EmergencyRemediationVendorId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.ElectricUtilityCompanyId" class="control-label col-xs-4">Electric Utility Company</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.ElectricUtilityCompanyId" id="Property.ElectricUtilityCompanyId" name="Property.ElectricUtilityCompanyId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.WaterUtilityCompanyId" class="control-label col-xs-4">Water Utility Company</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.WaterUtilityCompanyId" id="Property.WaterUtilityCompanyId" name="Property.WaterUtilityCompanyId" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Property.AdditionalNotes" class="control-label col-xs-4">Additional Notes</label>
+        <div class="col-xs-8">
+            <input ng-model="Property.AdditionalNotes" id="Property.AdditionalNotes" name="Property.AdditionalNotes" type="text" class="form-control" required="required">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-offset-4 col-xs-8">
+            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
