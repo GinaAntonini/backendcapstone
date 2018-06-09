@@ -34,5 +34,15 @@ namespace BackendCapstone.Services
             }
         }
 
+        public bool Delete(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.Execute(@"DELETE FROM Board WHERE Id = @id", new { id });
+
+                return result == 1;
+            }
+        }
     }
 }

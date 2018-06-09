@@ -16,13 +16,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MPM Emergency Book", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a ng-href="#!" class="navbar-brand">MPM EmergencyInfo</a>
+                <a ng-href="#!/properties" class="navbar-brand">Properties</a>
+                <a ng-href="#!/vendors" class="navbar-brand">Vendors</a>
+                <a ng-href="#!/emergencyreports" class="navbar-brand">Emergency Reports</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
+                <ul class="nav navbar-nav"></ul>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - MPM EmergencyInfo by Gina Antonini</p>
         </footer>
     </div>
 
