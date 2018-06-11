@@ -1,0 +1,5 @@
+﻿<h2>All Vendors</h2>
+<button type="button" class="btn btn-default" ng-click="addNewVendor()">Add New Vendor</button>
+<div ng-repeat="vendor in vendors">
+    {{vendor.Id}}. {{vendor.Name}}, {{vendor.PhoneNumber}}
+</div>

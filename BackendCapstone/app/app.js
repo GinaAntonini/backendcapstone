@@ -25,5 +25,15 @@ app.config(["$routeProvider", function ($routeProvider) {
         {
             templateUrl: "/app/partials/property_detail.html",
             controller: "PropertyDetailController"
-        });
+        })
+        .when("/vendors",
+        {
+            templateUrl: "/app/partials/vendors.html",
+            controller: "VendorsController"
+        })
+        .when("/vendors/new",
+        {
+            templateUrl: "/app/partials/new_vendor.html",
+            controller: "NewVendorController"
+        })
 }]);
