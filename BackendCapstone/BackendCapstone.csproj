@@ -213,6 +213,7 @@
     <Content Include="app\partials\properties.html" />
     <Content Include="app\partials\property_detail.html" />
     <Content Include="app\partials\view_properties.html" />
+    <Content Include="app\styles\main.css" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -272,7 +273,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\styles\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

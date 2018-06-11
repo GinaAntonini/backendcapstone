@@ -21,6 +21,15 @@ namespace BackendCapstone.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        [Route("{Id}"), HttpGet]
+        public HttpResponseMessage GetSingleProperty(int id)
+        {
+            var repository = new PropertiesRepository();
+            var result = repository.GetPropertyById(id);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
         [Route, HttpPost]
         public HttpResponseMessage AddNewProperty(PropertiesDto property)
         {
@@ -42,5 +51,6 @@ namespace BackendCapstone.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK);
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Property could not be updated");
         }
+
     }
 }
