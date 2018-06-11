@@ -1,12 +1,16 @@
 ﻿<h3>All Properties</h3>
 
-<div>
-    <i class="fa fa-search"></i><input type="text" placeholder="Search..." ng-model="searchText">
-</div>
-<div class="row">
+<ul ng-repeat="property in properties">
+    <li>
+        <a ng-click="viewPropertyDetail(property.Id)">
+            {{property.Name}}
+        </a>
+    </li>
+</ul>
+
+<!--<div class="row">
     <div ng-repeat="property in properties | filter: searchText | orderBy: 'Name'">
-        <div class="propertylist" ng-click="viewPropertyDetail(property.Id)">
-            <a>{{property.Name}}</a>
-        </div>
+        <a ng-click="viewPropertyDetail()">{{property.Name}}</a>
     </div>
-</div>
+</div>-->
+

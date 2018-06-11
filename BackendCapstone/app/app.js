@@ -23,7 +23,7 @@ app.config(["$routeProvider", function ($routeProvider) {
         })
         .when("/properties/:id",
         {
-            templateUrl: '/app/partials/property_detail.html',
-            controller: 'PropertyDetailController'
-        })
+            templateUrl: "/app/partials/property_detail.html",
+            controller: "PropertyDetailController"
+        });
 }]);

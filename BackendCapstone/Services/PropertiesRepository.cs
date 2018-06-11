@@ -22,6 +22,47 @@ namespace BackendCapstone.Services
             }
         }
 
+        public PropertiesDto GetPropertyById(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.QueryFirstOrDefault<PropertiesDto>(@"SELECT [Id]
+                                                                          ,[Name]
+                                                                          ,[AssociationCode]
+                                                                          ,[TaxId]
+                                                                          ,[ManagerId]
+                                                                          ,[BoardId]
+                                                                          ,[Address]
+                                                                          ,[City]
+                                                                          ,[PropertyType]
+                                                                          ,[NumberOfBuildings]
+                                                                          ,[NumberOfUnits]
+                                                                          ,[GateAccessCode]
+                                                                          ,[FireAlarmPassword]
+                                                                          ,[OnSiteContact]
+                                                                          ,[WaterShutOffLocation]
+                                                                          ,[RoofType]
+                                                                          ,[ParkingPolicy]
+                                                                          ,[RoofAccessCode]
+                                                                          ,[FireAlarmVendorId]
+                                                                          ,[InsuranceVendorId]
+                                                                          ,[ElevatorVendorId]
+                                                                          ,[PlumbingVendorId]
+                                                                          ,[ElectricalVendorId]
+                                                                          ,[GateVendorId]
+                                                                          ,[TowingVendorId]
+                                                                          ,[EmergencyRemediationVendorId]
+                                                                          ,[ElectricUtilityCompanyId]
+                                                                          ,[WaterUtilityCompanyId]
+                                                                          ,[AdditionalNotes]
+                                                                      FROM [dbo].[Property]
+                                                                      WHERE Id = @id", new { id });
+
+                return result;
+            }
+        }
+
         public SqlConnection GetConnection()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings["MetropolitanProperties"].ConnectionString);
