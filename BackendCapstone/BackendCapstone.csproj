@@ -184,6 +184,7 @@
     <Compile Include="Controllers\BoardsController.cs" />
     <Compile Include="Controllers\EmergencyReportsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\PropertiesController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,17 +193,21 @@
     <Compile Include="Models\BoardMembersDto.cs" />
     <Compile Include="Models\BoardsDto.cs" />
     <Compile Include="Models\EmergencyReportsDto.cs" />
+    <Compile Include="Models\ManagersDto.cs" />
     <Compile Include="Models\PropertiesDto.cs" />
     <Compile Include="Models\VendorsDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BoardMembersRepository.cs" />
     <Compile Include="Services\BoardsRepository.cs" />
     <Compile Include="Services\EmergencyReportsRepository.cs" />
+    <Compile Include="Services\ManagersRepository.cs" />
     <Compile Include="Services\PropertiesRepository.cs" />
     <Compile Include="Services\VendorsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\EditPropertyController.js" />
+    <Content Include="app\controllers\EditVendorController.js" />
     <Content Include="app\controllers\EmergencyReportsController.js" />
     <Content Include="app\controllers\HomeController.js" />
     <Content Include="app\controllers\NewEmergencyReportController.js" />
@@ -216,6 +221,7 @@
     <Content Include="app\controllers\VendorsController.js" />
     <Content Include="app\controllers\ViewPropertiesController.js" />
     <Content Include="app\images\EmailSignatureMP.jpg" />
+    <Content Include="app\partials\edit_vendor.html" />
     <Content Include="app\partials\emergency_reports.html" />
     <Content Include="app\partials\index.html" />
     <Content Include="app\partials\new_emergencyreport.html" />

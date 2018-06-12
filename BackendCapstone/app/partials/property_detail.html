@@ -2,15 +2,18 @@
     <div class="row">
         <div class="col-md-12">
             <h3>
-               {{property.Name}} Property Information
+                {{property.Name}} Property Information
             </h3>
+            <div class="col-xs-offset-2 col-xs-4">
+                <button name="edit" class="btn btn-primary" ng-click="editProperty()">Edit</button>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
             <h4>General Information</h4>
             <ul>
-                <li>Manager: {{property.ManagerId}}</li>
+                <li>Manager: {{property.ManagerName}}</li>
                 <li>Tax ID: {{property.TaxId}}</li>
                 <li>Property Type: {{property.PropertyType}}</li>
                 <li>Number of Buildings: {{property.NumberOfBuildings}}</li>
@@ -40,16 +43,16 @@
         <div class="col-md-4">
             <h4>Vendors</h4>
             <ul>
-                <li>Fire Alarm Vendor: {{property.FireAlarmVendorId}}</li>
-                <li>Insurance Vendor: {{property.InsuranceVendorId}}</li>
-                <li>Elevator Vendor: {{property.ElevatorVendorId}}</li>
-                <li>Plumbing Vendor: {{property.PlumbingVendorId}}</li>
-                <li>Electrical Vendor: {{property.ElectricalVendorId}}</li>
-                <li>Gate Vendor: {{property.GateVendorId}}</li>
-                <li>Towing Vendor: {{property.TowingVendorId}}</li>
-                <li>Emergency Remediation Vendor: {{property.EmergencyRemediationVendorId}}</li>
-                <li>Electric Utility Provider: {{property.ElectricUtilityCompanyId}}</li>
-                <li>Water Utility Provider: {{property.WaterUtilityCompanyId}}</li>
+                <li>Fire Alarm Vendor: {{property.FireAlarmVendorName}}</li>
+                <li>Insurance Vendor: {{property.InsuranceVendorName}}</li>
+                <li>Elevator Vendor: {{property.ElevatorVendorName}}</li>
+                <li>Plumbing Vendor: {{property.PlumbingVendorName}}</li>
+                <li>Electrical Vendor: {{property.ElectricalVendorName}}</li>
+                <li>Gate Vendor: {{property.GateVendorName}}</li>
+                <li>Towing Vendor: {{property.TowingVendorName}}</li>
+                <li>Emergency Remediation Vendor: {{property.EmergencyRemediationVendorName}}</li>
+                <li>Electric Utility Provider: {{property.ElectricUtilityCompanyName}}</li>
+                <li>Water Utility Provider: {{property.WaterUtilityCompanyName}}</li>
             </ul>
         </div>
 

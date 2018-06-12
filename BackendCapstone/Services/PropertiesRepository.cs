@@ -15,23 +15,12 @@ namespace BackendCapstone.Services
             {
                 db.Open();
 
-                var getPropertyList = db.Query<PropertiesDto>(@"SELECT Id, Name, AssociationCode, TaxId, ManagerId, BoardId, Address, City, PropertyType, NumberOfBuildings, NumberOfUnits, GateAccessCode, FireAlarmPassword, OnSiteContact, WaterShutOffLocation, RoofType, ParkingPolicy, RoofAccessCode, FireAlarmVendorId, InsuranceVendorId, ElevatorVendorId, PlumbingVendorId, ElectricalVendorId, GateVendorId, TowingVendorId, EmergencyRemediationVendorId, ElectricUtilityCompanyId, WaterUtilityCompanyId, AdditionalNotes FROM Property");
-
-                return getPropertyList;
-
-            }
-        }
-
-        public PropertiesDto GetPropertyById(int id)
-        {
-            using (var db = GetConnection())
-            {
-                db.Open();
-                var result = db.QueryFirstOrDefault<PropertiesDto>(@"SELECT [Id]
-                                                                          ,[Name]
+                var getPropertyList = db.Query<PropertiesDto>(@"SELECT [PropertyId] = p.Id
+                                                                          ,[PropertyName] = p.[Name]
                                                                           ,[AssociationCode]
                                                                           ,[TaxId]
-                                                                          ,[ManagerId]
+                                                                          ,[ManagerId]  
+                                                                          ,[ManagerName] = m.[Name]
                                                                           ,[BoardId]
                                                                           ,[Address]
                                                                           ,[City]
@@ -45,6 +34,16 @@ namespace BackendCapstone.Services
                                                                           ,[RoofType]
                                                                           ,[ParkingPolicy]
                                                                           ,[RoofAccessCode]
+                                                                          ,[FireAlarmVendorName] = vfa.[Name]
+                                                                          ,[InsuranceVendorName] = vi.[Name]
+                                                                          ,[ElevatorVendorName] = ve.[Name]
+                                                                          ,[PlumbingVendorName] = vp.[Name]
+                                                                          ,[ElectricalVendorName] = vel.[Name]
+                                                                          ,[GateVendorName] = vg.[Name]
+                                                                          ,[TowingVendorName] = vt.[Name]
+                                                                          ,[EmergencyRemediationVendorName] = ver.[Name]
+                                                                          ,[ElectricUtilityCompanyName] = veu.[Name]
+                                                                          ,[WaterUtilityCompanyName] = vwu.[Name]
                                                                           ,[FireAlarmVendorId]
                                                                           ,[InsuranceVendorId]
                                                                           ,[ElevatorVendorId]
@@ -56,8 +55,82 @@ namespace BackendCapstone.Services
                                                                           ,[ElectricUtilityCompanyId]
                                                                           ,[WaterUtilityCompanyId]
                                                                           ,[AdditionalNotes]
-                                                                      FROM [dbo].[Property]
-                                                                      WHERE Id = @id", new { id });
+                                                                      FROM [dbo].[Property] as p
+																	  join Manager as m on p.ManagerId = m.Id
+																	  left join Vendor as vfa on p.FireAlarmVendorId = vfa.Id
+																	  left join Vendor as vi on p.InsuranceVendorId = vi.Id
+                                                                      left join Vendor as ve on p.ElevatorVendorId = ve.Id
+																	  left join Vendor as vp on p.PlumbingVendorId = vp.Id
+																	  left join Vendor as vel on p.ElectricalVendorId = vel.Id
+																	  left join Vendor as vg on p.GateVendorId = vg.Id
+																	  left join Vendor as vt on p.TowingVendorId = vt.Id
+																	  left join Vendor as ver on p.EmergencyRemediationVendorId = ver.Id
+																	  left join Vendor as veu on p.ElectricUtilityCompanyId = veu.Id
+																	  left join Vendor as vwu on p.WaterUtilityCompanyId = vwu.Id");
+
+                return getPropertyList;
+
+            }
+        }
+
+        public PropertiesDto GetPropertyById(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.QueryFirstOrDefault<PropertiesDto>(@"SELECT [PropertyId] = p.Id
+                                                                          ,[PropertyName] = p.[Name]
+                                                                          ,[AssociationCode]
+                                                                          ,[TaxId]
+                                                                          ,[ManagerId]  
+                                                                          ,[ManagerName] = m.[Name]
+                                                                          ,[BoardId]
+                                                                          ,[Address]
+                                                                          ,[City]
+                                                                          ,[PropertyType]
+                                                                          ,[NumberOfBuildings]
+                                                                          ,[NumberOfUnits]
+                                                                          ,[GateAccessCode]
+                                                                          ,[FireAlarmPassword]
+                                                                          ,[OnSiteContact]
+                                                                          ,[WaterShutOffLocation]
+                                                                          ,[RoofType]
+                                                                          ,[ParkingPolicy]
+                                                                          ,[RoofAccessCode]
+                                                                          ,[FireAlarmVendorName] = vfa.[Name]
+                                                                          ,[InsuranceVendorName] = vi.[Name]
+                                                                          ,[ElevatorVendorName] = ve.[Name]
+                                                                          ,[PlumbingVendorName] = vp.[Name]
+                                                                          ,[ElectricalVendorName] = vel.[Name]
+                                                                          ,[GateVendorName] = vg.[Name]
+                                                                          ,[TowingVendorName] = vt.[Name]
+                                                                          ,[EmergencyRemediationVendorName] = ver.[Name]
+                                                                          ,[ElectricUtilityCompanyName] = veu.[Name]
+                                                                          ,[WaterUtilityCompanyName] = vwu.[Name]
+                                                                          ,[FireAlarmVendorId]
+                                                                          ,[InsuranceVendorId]
+                                                                          ,[ElevatorVendorId]
+                                                                          ,[PlumbingVendorId]
+                                                                          ,[ElectricalVendorId]
+                                                                          ,[GateVendorId]
+                                                                          ,[TowingVendorId]
+                                                                          ,[EmergencyRemediationVendorId]
+                                                                          ,[ElectricUtilityCompanyId]
+                                                                          ,[WaterUtilityCompanyId]
+                                                                          ,[AdditionalNotes]
+                                                                      FROM [dbo].[Property] as p
+																	  join Manager as m on p.ManagerId = m.Id
+																	  left join Vendor as vfa on p.FireAlarmVendorId = vfa.Id
+																	  left join Vendor as vi on p.InsuranceVendorId = vi.Id
+                                                                      left join Vendor as ve on p.ElevatorVendorId = ve.Id
+																	  left join Vendor as vp on p.PlumbingVendorId = vp.Id
+																	  left join Vendor as vel on p.ElectricalVendorId = vel.Id
+																	  left join Vendor as vg on p.GateVendorId = vg.Id
+																	  left join Vendor as vt on p.TowingVendorId = vt.Id
+																	  left join Vendor as ver on p.EmergencyRemediationVendorId = ver.Id
+																	  left join Vendor as veu on p.ElectricUtilityCompanyId = veu.Id
+																	  left join Vendor as vwu on p.WaterUtilityCompanyId = vwu.Id
+                                                                      WHERE p.Id = @id", new { id });
 
                 return result;
             }
@@ -137,7 +210,7 @@ namespace BackendCapstone.Services
 
         public bool Edit(int id, PropertiesDto property)
         {
-            property.Id = id;
+            property.PropertyId = id;
 
             using (var db = GetConnection())
             {

@@ -9,11 +9,12 @@ namespace BackendCapstone.Models
 {
     public class PropertiesDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int PropertyId { get; set; }
+        public string PropertyName { get; set; }
         public string AssociationCode { get; set; }
         public string TaxId { get; set; }
         public int ManagerId { get; set; }
+        public string ManagerName { get; set; }
         public int BoardId { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
@@ -27,6 +28,16 @@ namespace BackendCapstone.Models
         public string RoofType { get; set; }
         public string ParkingPolicy { get; set; }
         public string RoofAccessCode { get; set; }
+        public string InsuranceVendorName { get; set; }
+        public string ElevatorVendorName { get; set; }
+        public string PlumbingVendorName { get; set; }
+        public string ElectricalVendorName { get; set; }
+        public string GateVendorName { get; set; }
+        public string TowingVendorName { get; set; }
+        public string EmergencyRemediationVendorName { get; set; }
+        public string ElectricUtilityCompanyName { get; set; }
+        public string WaterUtilityCompanyName { get; set; }
+        public string FireAlarmVendorName { get; set; }
         public int FireAlarmVendorId { get; set; }
         public int InsuranceVendorId { get; set; }
         public int ElevatorVendorId { get; set; }
