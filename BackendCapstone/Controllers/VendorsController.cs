@@ -42,7 +42,7 @@ namespace BackendCapstone.Controllers
         }
 
         [Route("{id}"), HttpPut]
-        public HttpResponseMessage EditProperty(int Id, VendorsDto vendor)
+        public HttpResponseMessage EditVendor(int Id, VendorsDto vendor)
         {
             var repository = new VendorsRepository();
             var result = repository.Edit(Id, vendor);

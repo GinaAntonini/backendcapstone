@@ -1,11 +1,11 @@
 ﻿<h3>All Properties</h3>
 
 <div class="form-group mt-3">
-    <select class="form-control" id="viewPropertyDetail" ng-model="property.Id" required>
+    <select class="form-control" id="viewPropertyDetail" ng-model="property.PropertyId" required>
         <option value="" disabled selected>Select Property to View</option>
-        <option ng-repeat="property in properties" value="{{property.Id}}">{{property.Name}}</option>
+        <option ng-repeat="property in properties" value="{{property.PropertyId}}">{{property.PropertyName}}</option>
     </select>
-    <button type="button" class="btn btn-info" ng-click="viewPropertyDetail(property.Id)">Click for Property Details</button>
+    <button type="button" class="btn btn-info" ng-click="viewPropertyDetail(property.PropertyId)">Click for Property Details</button>
 </div>
 
 
