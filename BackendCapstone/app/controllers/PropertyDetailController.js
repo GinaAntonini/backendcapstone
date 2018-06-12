@@ -8,7 +8,7 @@
         });
 
         $scope.back = () => {
-            $location.path(`/viewproperties`);
+            $location.path(`/properties`);
         };
     }
 ]);

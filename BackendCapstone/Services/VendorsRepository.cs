@@ -22,6 +22,23 @@ namespace BackendCapstone.Services
             }
         }
 
+        public VendorsDto GetVendorById(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.QueryFirstOrDefault<VendorsDto>(@"SELECT   [Id]
+                                                                          ,[Name]
+                                                                          ,[PhoneNumber]
+                                                                          ,[ContactName]
+                                                                          ,[FieldOfWork]
+                                                                      FROM [dbo].[Vendor]
+                                                                      WHERE Id = @id", new { id });
+
+                return result;
+            }
+        }
+
         public SqlConnection GetConnection()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings["MetropolitanProperties"].ConnectionString);

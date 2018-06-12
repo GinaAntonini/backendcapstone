@@ -21,6 +21,15 @@ namespace BackendCapstone.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        [Route("{Id}"), HttpGet]
+        public HttpResponseMessage GetSingleVendor(int id)
+        {
+            var repository = new VendorsRepository();
+            var result = repository.GetVendorById(id);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
         [Route, HttpPost]
         public HttpResponseMessage AddNewVendor(VendorsDto vendor)
         {

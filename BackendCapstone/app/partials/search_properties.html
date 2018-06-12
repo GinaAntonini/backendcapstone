@@ -1,0 +1,12 @@
+﻿<div class="row">
+    <input type="text" name="search" ng-model="searchText" placeholder="Search..">
+    <div ng-repeat="property in properties | filter: searchText | orderBy: 'Name'">
+        <a ng-click="viewPropertyDetail(property.Id)">{{property.Name}}</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-offset-2 col-xs-4">
+        <button name="back" class="btn btn-default" ng-click="back()">Back</button>
+    </div>
+</div>

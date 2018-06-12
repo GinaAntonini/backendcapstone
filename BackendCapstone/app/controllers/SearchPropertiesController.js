@@ -1,4 +1,4 @@
-﻿app.controller("ViewPropertiesController", ["$location", "$routeParams", "$scope", "$http",
+﻿app.controller("SearchPropertiesController", ["$location", "$routeParams", "$scope", "$http",
     function ($location, $routeParams, $scope, $http) {
 
         $http.get("api/properties/").then(function (result) {

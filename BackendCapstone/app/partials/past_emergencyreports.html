@@ -1,0 +1,15 @@
+﻿<h3>Past Emergency Reports</h3>
+<h4>Select By Community Name</h4>
+<div class="form-group mt-3">
+    <select class="form-control" id="viewPropertyDetail" ng-model="property.Id" required>
+        <option value="" disabled selected>Select to View Filed Reports</option>
+        <option ng-repeat="property in properties" value="{{property.Id}}">{{property.Name}}</option>
+    </select>
+    <button type="button" class="btn btn-info" ng-click="viewEmergencyReportsByProperty(emergencyreport.Id)">Submit</button>
+</div>
+
+<div class="row">
+    <div class="col-xs-offset-2 col-xs-4">
+        <button name="back" class="btn btn-default" ng-click="back()">Back</button>
+    </div>
+</div>

@@ -1,49 +1,75 @@
-﻿<div class="col-xs-12">
-    <h3>{{property.Name}}</h3>
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+               {{property.Name}} Property Information
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>General Information</h4>
+            <ul>
+                <li>Manager: {{property.ManagerId}}</li>
+                <li>Tax ID: {{property.TaxId}}</li>
+                <li>Property Type: {{property.PropertyType}}</li>
+                <li>Number of Buildings: {{property.NumberOfBuildings}}</li>
+                <li>Number of Units: {{property.NumberOfUnits}}</li>
+                <li>On Site Contact: {{property.OnSiteContact}}</li>
+                <li>Water Shut Off Location: {{property.WaterShutOffLocation}}</li>
+            </ul>
+        </div>
 
-    <h4>General Information</h4>
-    <ul>
-        <li>Manager: {{property.ManagerId}}</li>
-        <li>Tax ID: {{property.TaxId}}</li>
-        <li>Property Type: {{property.PropertyType}}</li>
-        <li>Number of Buildings: {{property.NumberOfBuildings}}</li>
-        <li>Number of Units: {{property.NumberOfUnits}}</li>
-        <li>On Site Contact: {{property.OnSiteContact}}</li>
-        <li>Water Shut Off Location: {{property.WaterShutOffLocation}}</li>
-    </ul>
+        <div class="col-md-4">
+            <h4>Location</h4>
+            <ul>
+                <li>Property Address: {{property.Address}} </li>
+                <li>City: {{property.City}}</li>
+            </ul>
+        </div>
 
-    <h4>Location</h4>
-    <ul>
-        <li>Property Address: {{property.Address}} </li>
-        <li>City: {{property.City}}</li>
-    </ul>
+        <div class="col-md-4">
+            <h4>Access, Codes, & Passwords</h4>
+            <ul>
+                <li>Fire Alarm Password: {{property.FireAlarmPassword}}</li>
+                <li>Gate Access Code: {{property.GateAccess}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Vendors</h4>
+            <ul>
+                <li>Fire Alarm Vendor: {{property.FireAlarmVendorId}}</li>
+                <li>Insurance Vendor: {{property.InsuranceVendorId}}</li>
+                <li>Elevator Vendor: {{property.ElevatorVendorId}}</li>
+                <li>Plumbing Vendor: {{property.PlumbingVendorId}}</li>
+                <li>Electrical Vendor: {{property.ElectricalVendorId}}</li>
+                <li>Gate Vendor: {{property.GateVendorId}}</li>
+                <li>Towing Vendor: {{property.TowingVendorId}}</li>
+                <li>Emergency Remediation Vendor: {{property.EmergencyRemediationVendorId}}</li>
+                <li>Electric Utility Provider: {{property.ElectricUtilityCompanyId}}</li>
+                <li>Water Utility Provider: {{property.WaterUtilityCompanyId}}</li>
+            </ul>
+        </div>
 
-    <h4>Access, Codes, & Passwords</h4>
-    <ul>
-        <li>Fire Alarm Password: {{property.FireAlarmPassword}}</li>
-        <li>Gate Access Code: {{property.GateAccess}}</li>
-    </ul>
+        <div class="col-md-4">
+            <h4>Board Members</h4>
+            <ul>
+                <li>Board Members go here</li>
+            </ul>
+        </div>
 
-    <h4>Vendors</h4>
-    <ul>
-        <li>Fire Alarm Vendor: {{property.FireAlarmVendorId}}</li>
-        <li>Insurance Vendor: {{property.InsuranceVendorId}}</li>
-        <li>Elevator Vendor: {{property.ElevatorVendorId}}</li>
-        <li>Plumbing Vendor: {{property.PlumbingVendorId}}</li>
-        <li>Electrical Vendor: {{property.ElectricalVendorId}}</li>
-        <li>Gate Vendor: {{property.GateVendorId}}</li>
-        <li>Towing Vendor: {{property.TowingVendorId}}</li>
-        <li>Emergency Remediation Vendor: {{property.EmergencyRemediationVendorId}}</li>
-        <li>Electric Utility Provider: {{property.ElectricUtilityCompanyId}}</li>
-        <li>Water Utility Provider: {{property.WaterUtilityCompanyId}}</li>
-    </ul>
-
-    <h4>Board Members</h4>
-    <ul>
-        <li>{{}}</li>
-    </ul>
-
-
-    <ul></ul>
-</div>
-</div>
+        <div class="col-md-4">
+            <h4>Emergency Reports</h4>
+            <ul>
+                <li>Emergency Reports go here</li>
+            </ul>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-4">
+            <button name="back" class="btn btn-default" ng-click="back()">Back</button>
+        </div>
+    </div>
+ </div>
