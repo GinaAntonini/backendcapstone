@@ -9,5 +9,9 @@
                 console.log("error adding new property", err);
             });
         };
+
+        $scope.back = () => {
+            $location.path(`/properties`);
+        };
     }
 ])

@@ -203,20 +203,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\EmergencyReportsController.js" />
     <Content Include="app\controllers\HomeController.js" />
+    <Content Include="app\controllers\NewEmergencyReportController.js" />
     <Content Include="app\controllers\NewPropertyController.js" />
-    <Content Include="app\controllers\NewVendorController.html" />
     <Content Include="app\controllers\NewVendorController.js" />
+    <Content Include="app\controllers\PastEmergencyReportController.js" />
     <Content Include="app\controllers\PropertiesController.js" />
     <Content Include="app\controllers\PropertyDetailController.js" />
+    <Content Include="app\controllers\SearchPropertiesController.js" />
+    <Content Include="app\controllers\VendorDetailController.js" />
     <Content Include="app\controllers\VendorsController.js" />
     <Content Include="app\controllers\ViewPropertiesController.js" />
+    <Content Include="app\images\EmailSignatureMP.jpg" />
+    <Content Include="app\partials\emergency_reports.html" />
     <Content Include="app\partials\index.html" />
+    <Content Include="app\partials\new_emergencyreport.html" />
     <Content Include="app\partials\new_property.html" />
     <Content Include="app\partials\new_vendor.html" />
+    <Content Include="app\partials\past_emergencyreports.html" />
     <Content Include="app\partials\properties.html" />
     <Content Include="app\partials\property_detail.html" />
+    <Content Include="app\partials\search_properties.html" />
     <Content Include="app\partials\vendors.html" />
+    <Content Include="app\partials\vendor_detail.html" />
     <Content Include="app\partials\view_properties.html" />
     <Content Include="app\styles\main.css" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

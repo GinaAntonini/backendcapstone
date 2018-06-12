@@ -1,16 +1,15 @@
 ﻿<h3>All Properties</h3>
 
-<ul ng-repeat="property in properties">
-    <li>
-        <a ng-click="viewPropertyDetail(property.Id)">
-            {{property.Name}}
-        </a>
-    </li>
-</ul>
+<div class="form-group mt-3">
+    <select class="form-control" id="viewPropertyDetail" ng-model="property.Id" required>
+        <option value="" disabled selected>Select Property to View</option>
+        <option ng-repeat="property in properties" value="{{property.Id}}">{{property.Name}}</option>
+    </select>
+    <button type="button" class="btn btn-info" ng-click="viewPropertyDetail(property.Id)">Click for Property Details</button>
+</div>
 
-<!--<div class="row">
-    <div ng-repeat="property in properties | filter: searchText | orderBy: 'Name'">
-        <a ng-click="viewPropertyDetail()">{{property.Name}}</a>
-    </div>
-</div>-->
+
+
+
+
 

@@ -21,6 +21,11 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "/app/partials/view_properties.html",
             controller: "ViewPropertiesController"
         })
+        .when("/properties/search",
+        {
+            templateUrl: "/app/partials/search_properties.html",
+            controller: "SearchPropertiesController"
+        })
         .when("/properties/:id",
         {
             templateUrl: "/app/partials/property_detail.html",
@@ -35,5 +40,25 @@ app.config(["$routeProvider", function ($routeProvider) {
         {
             templateUrl: "/app/partials/new_vendor.html",
             controller: "NewVendorController"
+        })
+        .when("/vendors/:id",
+        {
+            templateUrl: "/app/partials/vendor_detail.html",
+            controller: "VendorDetailController"
+        })
+        .when("/emergencyreports",
+        {
+            templateUrl: "/app/partials/emergency_reports.html",
+            controller: "EmergencyReportsController"
+        })
+        .when("/emergencyreports/new",
+        {
+            templateUrl: "/app/partials/new_emergencyreport.html",
+            controller: "NewEmergencyReportController"
+        })
+        .when("/emergencyreports/past",
+        {
+            templateUrl: "/app/partials/past_emergencyreports.html",
+            controller: "PastEmergencyReportController"
         })
 }]);

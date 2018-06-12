@@ -1,5 +1,30 @@
 ﻿<h2>All Vendors</h2>
-<button type="button" class="btn btn-default" ng-click="addNewVendor()">Add New Vendor</button>
-<div ng-repeat="vendor in vendors">
-    {{vendor.Id}}. {{vendor.Name}}, {{vendor.PhoneNumber}}
+<div class="row">
+    <div class="col-md-4">
+        <h3>Add New Vendor</h3>
+        <button type="button" class="btn btn-default" ng-click="addNewVendor()">Click to Add</button>
+    </div>
+    <div class="col-md-4">
+        <h3>Select from All Vendors</h3>
+        <div class="form-group mt-3">
+            <select class="form-control" id="selectFromAllVendors" ng-model="vendor.Id" required>
+                <option value="" disabled selected>Select From All Vendors</option>
+                <option ng-repeat="vendor in vendors | orderBy:'Name'" value="{{vendor.Id}}">{{vendor.Name}}</option>
+            </select>
+            <button type="button" class="btn btn-info" ng-click="viewVendorDetail(vendor.Id)">Submit</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>Filter By Field Of Work</h3>
+        <div class="form-group mt-3">
+            <select class="form-control" id="filterByFieldOfWork" ng-model="vendor.FieldOfWork" required>
+                <option value="" disabled selected>Select Field Of Work</option>
+                <option ng-repeat="field in fieldOfWorks">{{field}}</option>
+            </select>
+            <button type="button" class="btn btn-info" ng-click="filterByFieldOfWork(vendor.Id)">Submit</button>
+        </div>
+    </div>
+
 </div>
+
+
