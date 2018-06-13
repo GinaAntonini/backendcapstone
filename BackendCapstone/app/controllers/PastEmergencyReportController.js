@@ -5,6 +5,10 @@
             $scope.properties = result.data;
         });
 
+        $scope.viewEmergencyReportsByProperty = () => {
+
+        }
+
         $scope.back = () => {
             $location.path(`/emergencyreports`);
         };

@@ -16,5 +16,6 @@ namespace BackendCapstone.Models
         public string IncidentDescription { get; set; }
         public string ActionTaken { get; set; }
         public int PropertyId { get; set; }
+        public string PropertyName { get; set; }
     }
 }

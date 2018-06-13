@@ -14,6 +14,52 @@ namespace BackendCapstone.Services
             return new SqlConnection(ConfigurationManager.ConnectionStrings["MetropolitanProperties"].ConnectionString);
         }
 
+        public IEnumerable<EmergencyReportsDto> GetAllEmergencyReports()
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+
+                var getEmergencyReports = db.Query<EmergencyReportsDto>(@"SELECT [Id] = Id
+                                                                          ,[Date] 
+                                                                          ,[ManagerId]
+                                                                          ,[Caller]
+                                                                          ,[CallerPhoneNumber]  
+                                                                          ,[Address]
+                                                                          ,[IncidentDescription]
+                                                                          ,[ActionTaken]
+                                                                          ,[PropertyId]
+                                                                          ,[OnCallManagerName]      
+                                                                      FROM [dbo].[Property]
+                                                                      WHERE [Id] = @Id");
+
+                return getEmergencyReports;
+
+            }
+        }
+
+        public EmergencyReportsDto GetEmergencyReportById(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.QueryFirstOrDefault<EmergencyReportsDto>(@"SELECT [Id] = Id
+                                                                          ,[Date] 
+                                                                          ,[ManagerId]
+                                                                          ,[Caller]
+                                                                          ,[CallerPhoneNumber]  
+                                                                          ,[Address]
+                                                                          ,[IncidentDescription]
+                                                                          ,[ActionTaken]
+                                                                          ,[PropertyId]
+                                                                          ,[OnCallManagerName]      
+                                                                      FROM [dbo].[Property]
+                                                                      WHERE [Id] = @Id", new { id });
+
+                return result;
+            }
+        }
+
         public bool Create(EmergencyReportsDto emergencyreport)
         {
             using (var db = GetConnection())
