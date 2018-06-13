@@ -187,6 +187,7 @@
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\PropertiesController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
+    <Compile Include="Controllers\VendorTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +197,7 @@
     <Compile Include="Models\ManagersDto.cs" />
     <Compile Include="Models\PropertiesDto.cs" />
     <Compile Include="Models\VendorsDto.cs" />
+    <Compile Include="Models\VendorTypeDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BoardMembersRepository.cs" />
     <Compile Include="Services\BoardsRepository.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Services\ManagersRepository.cs" />
     <Compile Include="Services\PropertiesRepository.cs" />
     <Compile Include="Services\VendorsRepository.cs" />
+    <Compile Include="Services\VendorTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
@@ -218,6 +221,7 @@
     <Content Include="app\controllers\PropertyDetailController.js" />
     <Content Include="app\controllers\SearchPropertiesController.js" />
     <Content Include="app\controllers\VendorDetailController.js" />
+    <Content Include="app\controllers\VendorsByFieldOfWorkController.js" />
     <Content Include="app\controllers\VendorsController.js" />
     <Content Include="app\controllers\ViewPropertiesController.js" />
     <Content Include="app\images\EmailSignatureMP.jpg" />
@@ -232,6 +236,7 @@
     <Content Include="app\partials\property_detail.html" />
     <Content Include="app\partials\search_properties.html" />
     <Content Include="app\partials\vendors.html" />
+    <Content Include="app\partials\vendor_by_fieldofwork.html" />
     <Content Include="app\partials\vendor_detail.html" />
     <Content Include="app\partials\view_properties.html" />
     <Content Include="app\styles\main.css" />

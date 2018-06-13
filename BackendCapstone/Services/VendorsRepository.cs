@@ -15,7 +15,7 @@ namespace BackendCapstone.Services
             {
                 db.Open();
 
-                var getVendorList = db.Query<VendorsDto>(@"SELECT Id, Name, PhoneNumber, ContactName, FieldOfWork FROM Vendor");
+                var getVendorList = db.Query<VendorsDto>(@"SELECT Id, Name, PhoneNumber, ContactName, FieldOfWork, VendorTypeId FROM Vendor");
 
                 return getVendorList;
 
@@ -32,6 +32,7 @@ namespace BackendCapstone.Services
                                                                           ,[PhoneNumber]
                                                                           ,[ContactName]
                                                                           ,[FieldOfWork]
+                                                                          ,[VendorTypeId]
                                                                       FROM [dbo].[Vendor]
                                                                       WHERE Id = @id", new { id });
 

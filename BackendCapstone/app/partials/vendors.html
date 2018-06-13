@@ -17,11 +17,11 @@
     <div class="col-md-4">
         <h3>Filter By Field Of Work</h3>
         <div class="form-group mt-3">
-            <select class="form-control" id="filterByFieldOfWork" ng-model="vendor.FieldOfWork" required>
+            <select class="form-control" id="filterByFieldOfWork" ng-model="vendorType.Id" required>
                 <option value="" disabled selected>Select Field Of Work</option>
-                <option ng-repeat="field in fieldOfWorks">{{field}}</option>
+                <option ng-repeat="vendorType in vendorTypes | orderBy:'Name'">{{vendorType.Name}}</option>
             </select>
-            <button type="button" class="btn btn-info" ng-click="filterByFieldOfWork(vendor.Id)">Submit</button>
+            <button type="button" class="btn btn-info" ng-click="viewSelectedFieldOfWorkVendors(vendorType.Id)">Submit</button>
         </div>
     </div>
 
