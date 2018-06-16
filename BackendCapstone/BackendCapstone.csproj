@@ -199,6 +199,7 @@
     <Compile Include="Models\EmergencyReportsDto.cs" />
     <Compile Include="Models\ManagersDto.cs" />
     <Compile Include="Models\PropertiesDto.cs" />
+    <Compile Include="Models\SendEmailDto.cs" />
     <Compile Include="Models\VendorsDto.cs" />
     <Compile Include="Models\VendorTypeDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -281,6 +282,7 @@
     </Content>
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="appsettings.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

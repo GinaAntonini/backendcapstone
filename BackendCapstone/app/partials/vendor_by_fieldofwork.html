@@ -2,7 +2,7 @@
 <div class="row">
     <div ng-repeat="vendor in vendors | orderBy: 'VendorName'">
         <ul>
-            <a ng-click="viewVendorDetail(vendor.VendorId)">{{vendor.VendorName}}</a>
+            <li><a ng-click="viewVendorDetail(vendor.VendorId)">{{vendor.VendorName}}</a></li>
         </ul>
     </div>
 </div>

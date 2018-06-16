@@ -5,13 +5,9 @@
             $scope.properties = result.data;
         });
 
-        $scope.viewEmergencyReportsByProperty = () => {
-
-        }
-
-        $scope.viewEmergencyReportsByDate = () => {
-
-        }
+        $http.get("api/emergencyreports/").then(function (result) {
+            $scope.emergencyreports = result.data;
+        });
 
         $scope.back = () => {
             $location.path(`/emergencyreports`);

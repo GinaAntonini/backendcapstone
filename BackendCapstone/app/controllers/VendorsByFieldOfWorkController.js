@@ -8,4 +8,4 @@
         $scope.viewVendorDetail = (vendorId) => {
             $location.path(`/vendors/${vendorId}`);
         };
-}])
+    }]);
