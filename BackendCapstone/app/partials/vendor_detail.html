@@ -1,19 +1,20 @@
 ﻿<div class="row">
     <div class="col-md-4">
         <h4>Vendor Info</h4>
-        <div class="col-xs-offset-2 col-xs-4">
-            <button name="edit" class="btn btn-default" ng-click="editVendor()">Edit</button>
-        </div>
         <ul>
-            <li>Name: {{property.Name}}</li>
-            <li>Phone Number: {{property.PhoneNumber}}</li>
-            <li>Contact Name: {{property.ContactName}}</li>
-            <li>Field Of Work: {{property.FieldOfWork}}</li>
+            <li>Name: {{vendor.VendorName}}</li>
+            <li>Phone Number: {{vendor.PhoneNumber}}</li>
+            <li>Contact Name: {{vendor.ContactName}}</li>
+            <li>Field Of Work: {{vendor.FieldOfWork}}</li>
         </ul>
     </div>
+    
 </div>
 <div class="row">
     <div class="col-xs-offset-2 col-xs-4">
+        <div class="col-xs-offset-2 col-xs-4">
+            <button name="edit" class="btn btn-default" ng-click="editVendor()">Edit</button>
+        </div>
         <button name="back" class="btn btn-default" ng-click="back()">Back</button>
     </div>
 </div>

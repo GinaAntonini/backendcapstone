@@ -21,8 +21,8 @@
             $scope.vendorTypes = result.data;
         });
 
-        $scope.viewSelectedVendorTypeVendors = (vendorTypeId) => {
-            $location.path(`/vendors/vendorsbyfieldofwork/${vendorTypeId}`);
+        $scope.viewSelectedVendorTypeVendors = (vendorId) => {
+            $location.path(`/vendors/vendorsbyfieldofwork/${vendorId}`);
         };
     }
 ]);

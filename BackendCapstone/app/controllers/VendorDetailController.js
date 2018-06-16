@@ -2,7 +2,7 @@
     function ($location, $routeParams, $scope, $http) {
 
         $http.get(`/api/vendors/${$routeParams.id}`).then(function (result) {
-            $scope.property = result.data;
+            $scope.vendor = result.data;
         });
 
         $scope.back = () => {

@@ -49,7 +49,7 @@ app.config(["$routeProvider", function ($routeProvider) {
         .when("/vendors/vendorsbyfieldofwork/:id",
         {
             templateUrl: "/app/partials/vendor_by_fieldofwork.html",
-            controller: "VendorByFieldOFWorkController"
+            controller: "VendorByFieldOfWorkController"
         })
         .when("/emergencyreports",
         {

@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <input type="text" name="search" ng-model="searchText" placeholder="Search..">
     <div ng-repeat="property in properties | filter: searchText | orderBy: 'Name'">
-        <a ng-click="viewPropertyDetail(property.Id)">{{property.Name}}</a>
+        <a ng-click="viewPropertyDetail(property.PropertyId)">{{property.PropertyName}}</a>
     </div>
 </div>
 

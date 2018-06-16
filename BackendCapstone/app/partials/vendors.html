@@ -7,21 +7,21 @@
     <div class="col-md-4">
         <h3>Select from All Vendors</h3>
         <div class="form-group mt-3">
-            <select class="form-control" id="selectFromAllVendors" ng-model="vendor.Id" required>
+            <select class="form-control" id="selectFromAllVendors" ng-model="vendor.VendorId" required>
                 <option value="" disabled selected>Select From All Vendors</option>
-                <option ng-repeat="vendor in vendors | orderBy:'Name'" value="{{vendor.Id}}">{{vendor.Name}}</option>
+                <option ng-repeat="vendor in vendors | orderBy:'VendorName'" value="{{vendor.VendorId}}">{{vendor.VendorName}}</option>
             </select>
-            <button type="button" class="btn btn-info" ng-click="viewVendorDetail(vendor.Id)">Submit</button>
+            <button type="button" class="btn btn-info" ng-click="viewVendorDetail(vendor.VendorId)">Submit</button>
         </div>
     </div>
     <div class="col-md-4">
-        <h3>Filter By Field Of Work</h3>
+        <h3>Filter By Vendor Type</h3>
         <div class="form-group mt-3">
             <select class="form-control" id="filterByFieldOfWork" ng-model="vendorType.Id" required>
                 <option value="" disabled selected>Select Field Of Work</option>
                 <option ng-repeat="vendorType in vendorTypes | orderBy:'Name'">{{vendorType.Name}}</option>
             </select>
-            <button type="button" class="btn btn-info" ng-click="viewSelectedFieldOfWorkVendors(vendorType.Id)">Submit</button>
+            <button type="button" class="btn btn-info" ng-click="viewSelectedVendorTypeVendors(vendorType.Id)">Submit</button>
         </div>
     </div>
 

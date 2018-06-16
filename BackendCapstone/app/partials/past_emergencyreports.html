@@ -1,13 +1,43 @@
 ﻿<h3>Past Emergency Reports</h3>
 <h4>Select By Community Name</h4>
 <div class="form-group mt-3">
-    <select class="form-control" id="viewEmergencyReportsByProperty" ng-model="property.Id" required>
+    <select class="form-control" id="viewEmergencyReportsByProperty" ng-model="property.PropertyId" required>
         <option value="" disabled selected>Select to View Filed Reports</option>
-        <option ng-repeat="property in properties" value="{{property.Id}}">{{property.Name}}</option>
+        <option ng-repeat="property in properties" value="{{property.PropertyId}}">{{property.PropertyName}}</option>
     </select>
     <button type="button" class="btn btn-info" ng-click="viewEmergencyReportsByProperty(emergencyreport.Id)">Submit</button>
 </div>
-
+<h4>All Past Emergency Reports</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
 <div class="row">
     <div class="col-xs-offset-2 col-xs-4">
         <button name="back" class="btn btn-default" ng-click="back()">Back</button>

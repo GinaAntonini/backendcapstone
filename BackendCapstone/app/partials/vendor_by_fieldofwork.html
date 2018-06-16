@@ -1,1 +1,18 @@
-﻿
+﻿<h3>All {{vendor.VendorTypeName}}</h3>
+<div class="row">
+    <div ng-repeat="vendor in vendors | orderBy: 'VendorName'">
+        <ul>
+            <a ng-click="viewVendorDetail(vendor.VendorId)">{{vendor.VendorName}}</a>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-offset-2 col-xs-4">
+        <button name="back" class="btn btn-default" ng-click="back()">Back</button>
+    </div>
+</div>
+
+
+
+

@@ -9,6 +9,10 @@
 
         }
 
+        $scope.viewEmergencyReportsByDate = () => {
+
+        }
+
         $scope.back = () => {
             $location.path(`/emergencyreports`);
         };
