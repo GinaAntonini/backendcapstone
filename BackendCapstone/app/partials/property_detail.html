@@ -43,16 +43,16 @@
         <div class="col-md-4">
             <h4>Vendors</h4>
             <ul>
-                <li>Fire Alarm Vendor: {{property.FireAlarmVendorName}}</li>
-                <li>Insurance Vendor: {{property.InsuranceVendorName}}</li>
-                <li>Elevator Vendor: {{property.ElevatorVendorName}}</li>
-                <li>Plumbing Vendor: {{property.PlumbingVendorName}}</li>
-                <li>Electrical Vendor: {{property.ElectricalVendorName}}</li>
-                <li>Gate Vendor: {{property.GateVendorName}}</li>
-                <li>Towing Vendor: {{property.TowingVendorName}}</li>
-                <li>Emergency Remediation Vendor: {{property.EmergencyRemediationVendorName}}</li>
-                <li>Electric Utility Provider: {{property.ElectricUtilityCompanyName}}</li>
-                <li>Water Utility Provider: {{property.WaterUtilityCompanyName}}</li>
+                <li>Fire Alarm Vendor:<a ng-click="viewVendorDetail(property.FireAlarmVendorId)">{{property.FireAlarmVendorName}}</a></li>
+                <li>Insurance Vendor:<a ng-click="viewVendorDetail(property.InsuranceVendorId)">{{property.InsuranceVendorName}}</a></li>
+                <li>Elevator Vendor:<a ng-click="viewVendorDetail(property.ElevatorVendorId)">{{property.ElevatorVendorName}}</a></li>
+                <li>Plumbing Vendor:<a ng-click="viewVendorDetail(property.PlumbingVendorId)">{{property.PlumbingVendorName}}</a></li>
+                <li>Electrical Vendor:<a ng-click="viewVendorDetail(property.ElectricalVendorId)">{{property.ElectricalVendorName}}</a></li>
+                <li>Gate Vendor: <a ng-click="viewVendorDetail(property.GateVendorId)">{{property.GateVendorName}}</a></li>
+                <li>Towing Vendor:<a ng-click="viewVendorDetail(property.TowingVendorId)">{{property.TowingVendorName}}</a></li>
+                <li>Emergency Remediation Vendor:<a ng-click="viewVendorDetail(property.EmergencyRemediationVendorId)">{{property.EmergencyRemediationVendorName}}</a></li>
+                <li>Electric Utility Provider:<a ng-click="viewVendorDetail(property.ElectricUtilityCompanyId)">{{property.ElectricUtilityCompanyName}}</a></li>
+                <li>Water Utility Provider:<a ng-click="viewVendorDetail(property.WaterUtilityCompanyId)">{{property.WaterUtilityCompanyName}}</a></li>
             </ul>
         </div>
 

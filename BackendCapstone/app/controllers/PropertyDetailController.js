@@ -7,6 +7,10 @@
             $scope.property = result.data;
         });
 
+        $scope.viewVendorDetail = (vendorId) => {
+            $location.path(`/vendors/${vendorId}`);
+        };
+
         $scope.back = () => {
             $location.path(`/properties`);
         };

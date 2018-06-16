@@ -15,7 +15,15 @@ namespace BackendCapstone.Services
             {
                 db.Open();
 
-                var getVendorList = db.Query<VendorsDto>(@"SELECT Id, Name, PhoneNumber, ContactName, FieldOfWork FROM Vendor");
+                var getVendorList = db.Query<VendorsDto>(@"SELECT   [VendorId] = v.Id
+                                                                   ,[VendorName] = v.Name
+                                                                   ,[PhoneNumber]
+                                                                   ,[ContactName]
+                                                                   ,[FieldOfWork]
+                                                                   ,[VendorTypeId]
+                                                                   ,[VendorTypeName] = vt.[Name]
+                                                               FROM [dbo].[Vendor] as v
+                                                               left join VendorType as vt on VendorTypeId = vt.Id");
 
                 return getVendorList;
 
@@ -27,13 +35,17 @@ namespace BackendCapstone.Services
             using (var db = GetConnection())
             {
                 db.Open();
-                var result = db.QueryFirstOrDefault<VendorsDto>(@"SELECT   [Id]
-                                                                          ,[Name]
+                var result = db.QueryFirstOrDefault<VendorsDto>(@"SELECT   [VendorId] = v.Id
+                                                                          ,[VendorName] = v.Name
                                                                           ,[PhoneNumber]
                                                                           ,[ContactName]
                                                                           ,[FieldOfWork]
-                                                                      FROM [dbo].[Vendor]
-                                                                      WHERE Id = @id", new { id });
+                                                                          ,[VendorTypeId]
+                                                                          ,[VendorTypeName] = vt.[Name]
+                                                                      FROM [dbo].[Vendor] as v
+                                                                      left join VendorType as vt on VendorTypeId = vt.Id
+                                                                      WHERE v.Id = @id", new { id });
+
 
                 return result;
             }
@@ -71,13 +83,13 @@ namespace BackendCapstone.Services
                 db.Open();
 
                 var edited = db.Execute(@"Update [dbo].[Vendor]
-                                                 SET [Name] = @Name
+                                                 SET [VendorName] = @VendorName
                                                     ,[PhoneNumber] = @PhoneNumber
                                                     ,[ContactName] = @ContactName
                                                     ,[FieldOfWork] = @FieldOfWork
                                                      WHERE [Id] = @Id", new
                                                     {
-                                                        vendor.Name,
+                                                        vendor.VendorName,
                                                         vendor.PhoneNumber,
                                                         vendor.ContactName,
                                                         vendor.FieldOfWork,

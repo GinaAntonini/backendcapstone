@@ -30,6 +30,15 @@ namespace BackendCapstone.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        [Route(""), HttpGet]
+        public HttpResponseMessage GetVendorsByType(string type)
+        {
+            var repository = new VendorsRepository();
+            var result = repository.ListAllVendors().Where(v => v.VendorTypeName == type);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
         [Route, HttpPost]
         public HttpResponseMessage AddNewVendor(VendorsDto vendor)
         {
