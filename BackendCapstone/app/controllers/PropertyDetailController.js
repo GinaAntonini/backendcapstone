@@ -22,5 +22,9 @@
         $http.get(`api/emergencyreports?type=${$routeParams.id}`).then(function (result) {
             $scope.emergencyreports = result.data;
         });
+
+        $http.get(`api/boardmembers?type=${$routeParams.id}`).then(function (result) {
+            $scope.boardmembers = result.data;
+        });
     }
 ]);

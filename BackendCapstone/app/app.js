@@ -76,4 +76,19 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "/app/partials/past_emergencyreports.html",
             controller: "PastEmergencyReportController"
         })
+        .when("/boards",
+        {
+            templateUrl: "/app/partials/boards.html",
+            controller: "BoardsController"
+        })
+        .when("/boards/new",
+        {
+            templateUrl: "/app/partials/new_board.html",
+            controller: "NewBoardController"
+        })
+        .when("/boards/edit/:id",
+        {
+            templateUrl: "/app/partials/edit_board.html",
+            controller: "EditBoardController"
+        })
 }]);

@@ -23,5 +23,23 @@ namespace BackendCapstone.Controllers
                 return Request.CreateResponse(HttpStatusCode.Created);
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Board could not be added");
         }
+
+        [Route, HttpGet]
+        public HttpResponseMessage GetBoardsList()
+        {
+            var repository = new BoardsRepository();
+            var result = repository.ListAllBoards();
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [Route("{Id}"), HttpGet]
+        public HttpResponseMessage GetSingleBoard(int id)
+        {
+            var repository = new BoardsRepository();
+            var result = repository.GetBoardById(id);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
     }
 }

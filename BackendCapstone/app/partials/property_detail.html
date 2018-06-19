@@ -58,18 +58,20 @@
 
         <div class="col-md-4">
             <h4>Board Members</h4>
-            <ul>
-                <li>Board Members go here</li>
-            </ul>
+            <div>
+                <ol>
+                    <li ng-repeat="boardmember in boardmembers | filter: property.PropertyId"><a ng-click="viewBoardMemberDetail(boardmember.BoardMemberId)">{{boardmember.Name}}</a></li>
+                </ol>
+            </div>
         </div>
 
         <div class="col-md-4">
             <h4>Emergency Reports</h4>
             <div class="row">
-                <div ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId">
-                    <ul>
-                        <li><a ng-click="viewEmergencyReportDetail(emergencyreport.EmergencyReportId)">{{emergencyreport.Date}}: {{emergencyreport.IncidentDescription}}</a></li>
-                    </ul>
+                <div>
+                    <ol>
+                        <li ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId"><a ng-click="viewEmergencyReportDetail(emergencyreport.EmergencyReportId)">{{emergencyreport.Date}}: {{emergencyreport.IncidentDescription}}</a></li>
+                    </ol>
                 </div>
             </div>
         </div>

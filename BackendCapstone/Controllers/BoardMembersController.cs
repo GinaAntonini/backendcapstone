@@ -23,6 +23,33 @@ namespace BackendCapstone.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Board Member could not be added");
         }
 
+        [Route, HttpGet]
+        public HttpResponseMessage GetBoardMembersList()
+        {
+            var repository = new BoardMembersRepository();
+            var result = repository.ListAllBoardMembers();
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [Route("{Id}"), HttpGet]
+        public HttpResponseMessage GetSingleBoardMember(int id)
+        {
+            var repository = new BoardMembersRepository();
+            var result = repository.GetBoardMemberById(id);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [Route(""), HttpGet]
+        public HttpResponseMessage GetBoardMembersByProperty(string property)
+        {
+            var repository = new BoardMembersRepository();
+            var result = repository.ListAllBoardMembers().Where(bm => bm.PropertyName == property);
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
         [Route("{id}/delete"), HttpDelete]
         public HttpResponseMessage DeleteBoardMember(int id)
         {

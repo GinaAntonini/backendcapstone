@@ -214,10 +214,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\BoardsController.js" />
+    <Content Include="app\controllers\EditBoardController.js" />
     <Content Include="app\controllers\EditPropertyController.js" />
     <Content Include="app\controllers\EditVendorController.js" />
     <Content Include="app\controllers\EmergencyReportsController.js" />
     <Content Include="app\controllers\HomeController.js" />
+    <Content Include="app\controllers\NewBoardController.js" />
     <Content Include="app\controllers\NewEmergencyReportController.js" />
     <Content Include="app\controllers\NewPropertyController.js" />
     <Content Include="app\controllers\NewVendorController.js" />
@@ -230,10 +233,13 @@
     <Content Include="app\controllers\VendorsController.js" />
     <Content Include="app\controllers\ViewPropertiesController.js" />
     <Content Include="app\images\EmailSignatureMP.jpg" />
+    <Content Include="app\partials\boards.html" />
+    <Content Include="app\partials\edit_board.html" />
     <Content Include="app\partials\edit_property.html" />
     <Content Include="app\partials\edit_vendor.html" />
     <Content Include="app\partials\emergency_reports.html" />
     <Content Include="app\partials\index.html" />
+    <Content Include="app\partials\new_board.html" />
     <Content Include="app\partials\new_emergencyreport.html" />
     <Content Include="app\partials\new_property.html" />
     <Content Include="app\partials\new_vendor.html" />

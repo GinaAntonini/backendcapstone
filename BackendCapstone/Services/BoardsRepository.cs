@@ -28,5 +28,32 @@ namespace BackendCapstone.Services
                 return records == 1;
             }
         }
+
+        public IEnumerable<BoardsDto> ListAllBoards()
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+
+                var getBoardsList = db.Query<BoardsDto>(@"SELECT Id, Name, PropertyId FROM Board");
+
+                return getBoardsList;
+            }
+        }
+
+        public BoardsDto GetBoardById(int id)
+        {
+            using (var db = GetConnection())
+            {
+                db.Open();
+                var result = db.QueryFirstOrDefault<BoardsDto>(@"SELECT    [Id]
+                                                                          ,[Name]
+                                                                          ,[PropertyId]
+                                                                      FROM [dbo].[Board]
+                                                                      WHERE Id = @id", new { id });
+
+                return result;
+            }
+        }
     }
 }
