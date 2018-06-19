@@ -21,42 +21,20 @@
     <div class="form-group">
         <label for="EmergencyReport.PropertyName" class="control-label col-xs-4">Property Name</label>
         <div class="col-xs-8">
-            <select class="form-control" id="SelectProperty" ng-model="EmergencyReport.PropertyId" required>
-                <option value="" disabled selected>Select Property</option>
-                <option ng-repeat="property in properties" value="{{property.PropertyId}}">{{property.PropertyName}}</option>
-            </select>
+            <select class="form-control" id="EmergencyReport.PropertyName" ng-model="EmergencyReport.PropertyId" ng-options="property.PropertyId as property.PropertyName for property in properties"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="EmergencyReport.PropertyManagerName" class="control-label col-xs-4">Property Manager Name</label>
+        <label for="EmergencyReport.PropertyManagerId" class="control-label col-xs-4">Property Manager Name</label>
         <div class="col-xs-8">
-            <select class="form-control" ng-model="EmergencyReport.ManagerId">
-                <option value="1">Glenn Carson</option>
-                <option value="2">Teddy Christenberry</option>
-                <option value="4">Tyler Hall</option>
-                <option value="5">Dawn Hardiman</option>
-                <option value="6">Terry Hardiman</option>
-                <option value="7">David Wall</option>
-                <option value="8">Todd Fuller</option>
-                <option value="9">Zach Johnson</option>
-                <option value="10">Gina Antonini</option>
-            </select>
+            <select class="form-control" id="EmergencyReport.ManagerId" ng-model="EmergencyReport.ManagerId" ng-options="manager.Id as manager.Name for manager in managers"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="EmergencyReport.OnCallManagerName" class="control-label col-xs-4">On Call Manager Name</label>
+        <label for="EmergencyReport.OnCallManagerId" class="control-label col-xs-4">On Call Manager Name</label>
         <div class="col-xs-8">
-            <select class="form-control" ng-model="EmergencyReport.OnCallManagerName">
-                <option value="1">Glenn Carson</option>
-                <option value="2">Teddy Christenberry</option>
-                <option value="4">Tyler Hall</option>
-                <option value="5">Dawn Hardiman</option>
-                <option value="6">Terry Hardiman</option>
-                <option value="7">David Wall</option>
-                <option value="8">Todd Fuller</option>
-                <option value="9">Zach Johnson</option>
-                <option value="10">Gina Antonini</option>
-            </select>
+            <select class="form-control" id="EmergencyReport.ManagerId" ng-model="EmergencyReport.OnCallManagerId" ng-options="manager.Id as manager.Name for manager in managers"></select>
+            
         </div>
     </div>
     <div class="form-group">

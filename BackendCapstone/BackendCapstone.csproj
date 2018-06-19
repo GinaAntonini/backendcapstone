@@ -226,10 +226,11 @@
     <Content Include="app\controllers\PropertyDetailController.js" />
     <Content Include="app\controllers\SearchPropertiesController.js" />
     <Content Include="app\controllers\VendorDetailController.js" />
-    <Content Include="app\controllers\VendorsByFieldOfWorkController.js" />
+    <Content Include="app\controllers\VendorsByVendorTypeController.js" />
     <Content Include="app\controllers\VendorsController.js" />
     <Content Include="app\controllers\ViewPropertiesController.js" />
     <Content Include="app\images\EmailSignatureMP.jpg" />
+    <Content Include="app\partials\edit_property.html" />
     <Content Include="app\partials\edit_vendor.html" />
     <Content Include="app\partials\emergency_reports.html" />
     <Content Include="app\partials\index.html" />
@@ -241,7 +242,7 @@
     <Content Include="app\partials\property_detail.html" />
     <Content Include="app\partials\search_properties.html" />
     <Content Include="app\partials\vendors.html" />
-    <Content Include="app\partials\vendor_by_fieldofwork.html" />
+    <Content Include="app\partials\vendor_by_vendortype.html" />
     <Content Include="app\partials\vendor_detail.html" />
     <Content Include="app\partials\view_properties.html" />
     <Content Include="app\styles\main.css" />

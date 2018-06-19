@@ -11,6 +11,7 @@ namespace BackendCapstone.Models
     {
         public int PropertyId { get; set; }
         public string PropertyName { get; set; }
+        public string Name { get; set; }
         public string AssociationCode { get; set; }
         public string TaxId { get; set; }
         public int ManagerId { get; set; }

@@ -5,10 +5,6 @@
             $scope.vendors = result.data;
         });
 
-        $http.get(`/api/vendors/${$routeParams.id}`).then(function (result) {
-            $scope.vendor = result.data;
-        });
-
         $scope.viewVendorDetail = (vendorId) => {
             $location.path(`/vendors/${vendorId}`);
         };
@@ -22,7 +18,7 @@
         });
 
         $scope.viewSelectedVendorTypeVendors = (vendorId) => {
-            $location.path(`/vendors/vendorsbyfieldofwork/${vendorId}`);
+            $location.path(`/vendors/vendorsbyvendortype/${vendorId}`);
         };
     }
 ]);
