@@ -2,15 +2,21 @@
     function ($location, $routeParams, $scope, $http) {
 
         $http.get(`/api/vendors/${$routeParams.id}`).then(function (result) {
-            $scope.property = result.data;
+            $scope.vendor = result.data;
         });
 
-        $scope.edit = (vendor) => {
-            $http.put("/api/vendors/${id}/edit", vendor).then(function () {
-                $location.path(`/vendors`);
-            }).catch((err) => {
-                console.log("error updating vendor", err);
-            });
+        $scope.updateVendor = (vendor) => {
+            $http.put(`/api/vendors/${$routeParams.id}`, vendor).then((result) => {
+                $location.path(`/vendors/`);
+            })
+        }
+
+        $http.get("api/vendortypes/").then(function (result) {
+            $scope.vendorTypes = result.data;
+        });
+
+        $scope.back = () => {
+            $location.path(`/vendors`);
         };
     }
 ]);

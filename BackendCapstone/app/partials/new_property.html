@@ -31,16 +31,9 @@
     <div class="form-group">
         <label for="Property.ManagerId" class="control-label col-xs-4">Manager</label>
         <div class="col-xs-8">
-            <select ng-model="Property.ManagerId">
-                <option value="1">Glenn Carson</option>
-                <option value="2">Teddy Christenberry</option>
-                <option value="4">Tyler Hall</option>
-                <option value="5">Dawn Hardiman</option>
-                <option value="6">Terry Hardiman</option>
-                <option value="7">David Wall</option>
-                <option value="8">Todd Fuller</option>
-                <option value="8">Zach Johnson</option>
-            </select>
+            <div class="col-xs-8">
+                <select class="form-control" id="property.ManagerId" ng-model="Property.ManagerId" ng-options="manager.Id as manager.Name for manager in managers"></select>
+            </div>
         </div>
     </div>
     <div class="form-group">
@@ -104,69 +97,63 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.FireAlarmVendorId" class="control-label col-xs-4">Fire Alarm Vendor</label>
+        <label for="property.FireAlarmVendorId" class="control-label col-xs-4">Fire Alarm Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.FireAlarmVendorId" id="Property.FireAlarmVendorId" name="Property.FireAlarmVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.FireAlarmVendorId" ng-model="Property.FireAlarmVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Fire Alarm Monitoring'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.InsuranceVendorId" class="control-label col-xs-4">Insurance Vendor</label>
+        <label for="property.InsuranceVendorId" class="control-label col-xs-4">Insurance Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.InsuranceVendorId" id="Property.InsuranceVendorId" name="Property.InsuranceVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.InsuranceVendorId" ng-model="Property.InsuranceVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors |filter: vendor.VendorTypeName = 'Insurance'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.ElevatorVendorId" class="control-label col-xs-4">Elevator Vendor</label>
+        <label for="property.ElevatorVendorId" class="control-label col-xs-4">Elevator Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.ElevatorVendorId" id="Property.ElevatorVendorId" name="Property.ElevatorVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.ElevatorVendorId" ng-model="Property.ElevatorVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors |filter: vendor.VendorTypeName = 'Elevator'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.PlumbingVendorId" class="control-label col-xs-4">Plumbing Vendor</label>
+        <label for="property.PlumbingVendorId" class="control-label col-xs-4">Plumbing Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.PlumbingVendorId" id="Property.PlumbingVendorId" name="Property.PlumbingVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.PlumbingVendorId" ng-model="Property.PlumbingVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors |filter: vendor.VendorTypeName = 'Plumbing'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
+        <label for="property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.ElectricalVendorId" id="Property.ElectricalVendorId" name="Property.ElectricalVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.ElectricalVendorId" ng-model="Property.ElectricalVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors |filter: vendor.VendorTypeName = 'Electrical'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.GateVendorId" class="control-label col-xs-4">Gate Vendor</label>
+        <label for="property.GateVendorId" class="control-label col-xs-4">Gate Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.GateVendorId" id="Property.GateVendorId" name="Property.GateVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.GateVendorId" ng-model="Property.GateVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Gate'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.TowingVendorId" class="control-label col-xs-4">Towing Vendor</label>
+        <label for="property.TowingVendorId" class="control-label col-xs-4">Towing Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.TowingVendorId" id="Property.TowingVendorId" name="Property.TowingVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.TowingVendorId" ng-model="Property.TowingVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors |filter: vendor.VendorTypeName = 'Towing'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
+        <label for="property.EmergencyRemediationVendorId" class="control-label col-xs-4">Emergency Remediation Vendor</label>
         <div class="col-xs-8">
-            <input ng-model="Property.ElectricalVendorId" id="Property.ElectricalVendorId" name="Property.ElectricalVendorId" type="text" class="form-control" required="required">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Property.EmergencyRemediationVendorId" class="control-label col-xs-4">Emergency Remediation Vendor</label>
-        <div class="col-xs-8">
-            <input ng-model="Property.EmergencyRemediationVendorId" id="Property.EmergencyRemediationVendorId" name="Property.EmergencyRemediationVendorId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.EmergencyRemediationVendorId" ng-model="Property.EmergencyRemediationVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Emergency Remediation'"></select>
         </div>
     </div>
     <div class="form-group">
         <label for="Property.ElectricUtilityCompanyId" class="control-label col-xs-4">Electric Utility Company</label>
         <div class="col-xs-8">
-            <input ng-model="Property.ElectricUtilityCompanyId" id="Property.ElectricUtilityCompanyId" name="Property.ElectricUtilityCompanyId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.ElectricUtilityCompanyId" ng-model="Property.ElectricUtilityCompanyId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Electric Utility Provider'"></select>
         </div>
     </div>
     <div class="form-group">
-        <label for="Property.WaterUtilityCompanyId" class="control-label col-xs-4">Water Utility Company</label>
+        <label for="property.WaterUtilityCompanyId" class="control-label col-xs-4">Water Utility Company</label>
         <div class="col-xs-8">
-            <input ng-model="Property.WaterUtilityCompanyId" id="Property.WaterUtilityCompanyId" name="Property.WaterUtilityCompanyId" type="text" class="form-control" required="required">
+            <select class="form-control" id="property.WaterUtilityCompanyId" ng-model="Property.WaterUtilityCompanyId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Water Utility Provider'"></select>
         </div>
     </div>
     <div class="form-group">

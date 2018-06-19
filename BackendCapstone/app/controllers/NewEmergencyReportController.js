@@ -14,6 +14,9 @@
             $scope.properties = result.data;
         });
 
+        $http.get("api/managers/").then(function (result) {
+            $scope.managers = result.data;
+        });
 
         $scope.back = () => {
             $location.path(`/emergencyreports`);

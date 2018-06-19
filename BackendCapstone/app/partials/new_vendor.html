@@ -19,20 +19,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="Vendor.FieldOfWork" class="control-label col-xs-4">Field Of Work</label>
+        <label for="Vendor.VendorTypeId" class="control-label col-xs-4">Vendor Type</label>
         <div class="col-xs-8">
-            <select ng-model="Vendor.FieldOfWork">
-                <option value="1">Insurance</option>
-                <option value="2">Fire Alarm Vendor</option>
-                <option value="4">Elevator</option>
-                <option value="5">Plumbing</option>
-                <option value="6">Electrical</option>
-                <option value="7">Gate</option>
-                <option value="8">Towing</option>
-                <option value="8">Emergency Remediation</option>
-                <option value="8">Electric Utility Provider</option>
-                <option value="8">Water Utility Provider</option>
-            </select>
+            <select class="form-control" id="Vendor.VendorTypeId" ng-model="Vendor.VendorTypeId" ng-options="vendorType.Id as vendorType.Name for vendorType in vendorTypes"></select>
         </div>
     </div>
     <div class="form-group row">

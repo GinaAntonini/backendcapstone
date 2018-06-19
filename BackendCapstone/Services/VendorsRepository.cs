@@ -82,17 +82,20 @@ namespace BackendCapstone.Services
             {
                 db.Open();
 
-                var edited = db.Execute(@"Update [dbo].[Vendor]
-                                                 SET [VendorName] = @VendorName
+                var edited = db.Execute(@"Update [dbo].[Vendor] 
+                                                 SET [Name] = @VendorName
                                                     ,[PhoneNumber] = @PhoneNumber
                                                     ,[ContactName] = @ContactName
                                                     ,[FieldOfWork] = @FieldOfWork
+                                                    ,[VendorTypeId] = @VendorTypeId
                                                      WHERE [Id] = @Id", new
                                                     {
                                                         vendor.VendorName,
                                                         vendor.PhoneNumber,
                                                         vendor.ContactName,
                                                         vendor.FieldOfWork,
+                                                        vendor.VendorTypeId,
+                                                        vendor.VendorTypeName,
                                                         id
                                                     });
                 return edited == 1; 

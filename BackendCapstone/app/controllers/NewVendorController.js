@@ -9,5 +9,9 @@
                 console.log("error adding new vendor", err);
             });
         };
+
+        $http.get("api/vendortypes/").then(function (result) {
+            $scope.vendorTypes = result.data;
+        });
     }
 ])

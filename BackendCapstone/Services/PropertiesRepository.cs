@@ -148,11 +148,10 @@ namespace BackendCapstone.Services
                 db.Open();
                     
                 var records = db.Execute(@"INSERT INTO [dbo].[Property]
-                                                     ([Name]
+                                                     ([Name] 
                                                      ,[AssociationCode]
                                                      ,[TaxId]
                                                      ,[ManagerId]
-                                                     ,[BoardId]
                                                      ,[Address]
                                                      ,[City]
                                                      ,[PropertyType]
@@ -181,7 +180,6 @@ namespace BackendCapstone.Services
                                                      ,@AssociationCode
                                                      ,@TaxId
                                                      ,@ManagerId
-                                                     ,@BoardId
                                                      ,@Address
                                                      ,@City
                                                      ,@PropertyType
@@ -189,9 +187,10 @@ namespace BackendCapstone.Services
                                                      ,@NumberOfUnits
                                                      ,@GateAccessCode
                                                      ,@FireAlarmPassword
-                                                     ,@OnsiteContact
+                                                     ,@OnSiteContact
                                                      ,@WaterShutOffLocation
-                                                     ,@RoofType,@ParkingPolicy
+                                                     ,@RoofType
+                                                     ,@ParkingPolicy
                                                      ,@RoofAccessCode
                                                      ,@FireAlarmVendorId
                                                      ,@InsuranceVendorId
@@ -210,18 +209,17 @@ namespace BackendCapstone.Services
 
         public bool Edit(int id, PropertiesDto property)
         {
-            property.PropertyId = id;
+            //property.PropertyId = id;
 
             using (var db = GetConnection())
             {
                 db.Open();
 
                 var edited = db.Execute(@"Update [dbo].[Property]
-                                                     SET [Name] = @Name
+                                                     SET [Name] = @PropertyName
                                                      ,[AssociationCode] = @AssociationCode
                                                      ,[TaxId] = @TaxId
                                                      ,[ManagerId] = @ManagerId
-                                                     ,[BoardId] = @BoardId
                                                      ,[Address] = @Address
                                                      ,[City] = @City
                                                      ,[PropertyType] = @PropertyType
@@ -243,9 +241,39 @@ namespace BackendCapstone.Services
                                                      ,[TowingVendorId] = @TowingVendorId
                                                      ,[EmergencyRemediationVendorId] = @EmergencyRemediationVendorId
                                                      ,[ElectricUtilityCompanyId] = @ElectricUtilityCompanyId
-                                                     ,[WaterUtilityCompanyId] = @WaterUtilityCompanyId 
+                                                     ,[WaterUtilityCompanyId] = @WaterUtilityCompanyId
                                                      ,[AdditionalNotes] = @AdditionalNotes
-                                                     WHERE [Id] = @Id", property);
+                                                     WHERE [Id] = @Id", new
+                                                        {
+                                                            property.PropertyName,
+                                                            property.AssociationCode,
+                                                            property.TaxId,
+                                                            property.ManagerId,
+                                                            property.Address,
+                                                            property.City,
+                                                            property.PropertyType,
+                                                            property.NumberOfBuildings,
+                                                            property.NumberOfUnits,
+                                                            property.GateAccessCode,
+                                                            property.FireAlarmPassword,
+                                                            property.OnSiteContact,
+                                                            property.WaterShutOffLocation,
+                                                            property.RoofType,
+                                                            property.ParkingPolicy,
+                                                            property.RoofAccessCode,
+                                                            property.FireAlarmVendorId,
+                                                            property.InsuranceVendorId,
+                                                            property.ElevatorVendorId,
+                                                            property.PlumbingVendorId,
+                                                            property.ElectricalVendorId,
+                                                            property.GateVendorId,
+                                                            property.TowingVendorId,
+                                                            property.EmergencyRemediationVendorId,
+                                                            property.ElectricUtilityCompanyId,
+                                                            property.WaterUtilityCompanyId,
+                                                            property.AdditionalNotes,
+                                                            id
+                                                        });
 
                 return edited == 1;
             }

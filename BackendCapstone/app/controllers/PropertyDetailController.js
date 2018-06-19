@@ -14,5 +14,13 @@
         $scope.back = () => {
             $location.path(`/properties`);
         };
+
+        $scope.edit = (propertyId) => {
+            $location.path(`/properties/edit/${propertyId}`);
+        };
+
+        $http.get(`api/emergencyreports?type=${$routeParams.id}`).then(function (result) {
+            $scope.emergencyreports = result.data;
+        });
     }
 ]);

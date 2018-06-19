@@ -9,12 +9,9 @@
             $location.path(`/vendors`);
         };
 
-        $scope.edit = (vendor) => {
-            $http.put("/api/vendors/", vendor).then(function () {
-                $location.path(`/vendors/:id`);
-            }).catch((err) => {
-                console.log("error updating vendor", err);
-            });
+        $scope.edit = (vendorId) => {
+            $location.path(`/vendors/edit/${vendorId}`);
         };
+
     }
 ]);
