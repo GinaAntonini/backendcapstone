@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-4">
         <h3>Add New Vendor</h3>
-        <button type="button" class="btn btn-default" ng-click="addNewVendor()">Click to Add</button>
+        <button type="button" class="btn btn-primary" ng-click="addNewVendor()">Click to Add</button>
     </div>
     <div class="col-md-4">
         <h3>Select from All Vendors</h3>
@@ -11,7 +11,7 @@
                 <option value="" disabled selected>Select From All Vendors</option>
                 <option ng-repeat="vendor in vendors | orderBy:'VendorName'" value="{{vendor.VendorId}}">{{vendor.VendorName}}</option>
             </select>
-            <button type="button" class="btn btn-info" ng-click="viewVendorDetail(vendor.VendorId)">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="viewVendorDetail(vendor.VendorId)">Submit</button>
         </div>
     </div>
     <div class="col-md-4">
@@ -21,7 +21,7 @@
                 <option value="" disabled selected>Select Vendor Type</option>
                 <option ng-repeat="vendorType in vendorTypes | orderBy:'Name'">{{vendorType.Name}}</option>
             </select>
-            <button type="button" class="btn btn-info" ng-click="viewSelectedVendorTypeVendors(vendorType.Id)">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="viewSelectedVendorTypeVendors(vendorType.Id)">Submit</button>
         </div>
     </div>
 

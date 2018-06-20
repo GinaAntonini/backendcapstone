@@ -15,3 +15,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+[ng-click] {
+    cursor: pointer;
+}
+
+body {
+    background-color: #f2f2f2;
+}
