@@ -3,34 +3,42 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Vibur" rel="stylesheet">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body ng-app="BackendCapstone">
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a ng-href="#!" class="navbar-brand">MPM Emergency Management</a>
-                <a ng-href="#!/properties" class="navbar-brand">Properties</a>
-                <a ng-href="#!/vendors" class="navbar-brand">Vendors</a>
-                <a ng-href="#!/emergencyreports" class="navbar-brand">Emergency Reports</a>
+                <a ng-href="#!" class="navbar-brand">MPM OnCallManager</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
-            </div>
-        </div>
-    </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li> <a ng-href="#!/properties" class="navbar-brand">Properties</a></li>
+                    <li><a ng-href="#!/vendors" class="navbar-brand">Vendors</a></li>
+                    <li><a ng-href="#!/emergencyreports" class="navbar-brand">Emergency Reports</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    @**@
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - MPM EmergencyManager by Gina Antonini</p>
+            <p>&copy; @DateTime.Now.Year - MPM OnCallManager by Gina Antonini</p>
         </footer>
     </div>
 
