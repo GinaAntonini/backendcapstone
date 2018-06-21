@@ -15,10 +15,6 @@ textarea {
     max-width: 280px;
 }
 
-[ng-click] {
-    cursor: pointer;
-}
-
 body {
     background-color: #f2f2f2;
     font-family: 'Lato', sans-serif;
@@ -108,4 +104,28 @@ body {
         background-color: #7094db;
     }
 }
+
+#propertyDetailWrapper {
+    margin: 1%;
+}
+
+#propertyDetailRows {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.thumbnail {
+    min-height: 400px;
+}
+/*.thumbnail:hover {
+    background: #000;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+}*/
 

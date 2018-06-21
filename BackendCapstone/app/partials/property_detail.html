@@ -1,84 +1,102 @@
-﻿<div class="container-fluid">
+﻿<div class="container-fluid" id="propertyDetailWrapper">
     <div class="row">
         <div class="col-md-12">
-            <h3>
-                {{property.PropertyName}} Property Information
-            </h3>
-            <div class="col-xs-offset-2 col-xs-4">
-                <button name="edit" class="btn btn-primary" ng-click="edit(property.PropertyId)">Edit</button>
-            </div>
+            <h3>{{property.PropertyName}} Property Information</h3>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h4>General Information</h4>
-            <ul>
-                <li>Manager: {{property.ManagerName}}</li>
-                <li>Tax ID: {{property.TaxId}}</li>
-                <li>Property Type: {{property.PropertyType}}</li>
-                <li>Number of Buildings: {{property.NumberOfBuildings}}</li>
-                <li>Number of Units: {{property.NumberOfUnits}}</li>
-                <li>On Site Contact: {{property.OnSiteContact}}</li>
-                <li>Water Shut Off Location: {{property.WaterShutOffLocation}}</li>
-            </ul>
-        </div>
-
-        <div class="col-md-4">
-            <h4>Location</h4>
-            <ul>
-                <li>Property Address: {{property.Address}} </li>
-                <li>City: {{property.City}}</li>
-            </ul>
-        </div>
-
-        <div class="col-md-4">
-            <h4>Access, Codes, & Passwords</h4>
-            <ul>
-                <li>Fire Alarm Password: {{property.FireAlarmPassword}}</li>
-                <li>Gate Access Code: {{property.GateAccess}}</li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h4>Vendors</h4>
-            <ul>
-                <li>Fire Alarm Vendor:<a ng-click="viewVendorDetail(property.FireAlarmVendorId)">{{property.FireAlarmVendorName}}</a></li>
-                <li>Insurance Vendor:<a ng-click="viewVendorDetail(property.InsuranceVendorId)">{{property.InsuranceVendorName}}</a></li>
-                <li>Elevator Vendor:<a ng-click="viewVendorDetail(property.ElevatorVendorId)">{{property.ElevatorVendorName}}</a></li>
-                <li>Plumbing Vendor:<a ng-click="viewVendorDetail(property.PlumbingVendorId)">{{property.PlumbingVendorName}}</a></li>
-                <li>Electrical Vendor:<a ng-click="viewVendorDetail(property.ElectricalVendorId)">{{property.ElectricalVendorName}}</a></li>
-                <li>Gate Vendor: <a ng-click="viewVendorDetail(property.GateVendorId)">{{property.GateVendorName}}</a></li>
-                <li>Towing Vendor:<a ng-click="viewVendorDetail(property.TowingVendorId)">{{property.TowingVendorName}}</a></li>
-                <li>Emergency Remediation Vendor:<a ng-click="viewVendorDetail(property.EmergencyRemediationVendorId)">{{property.EmergencyRemediationVendorName}}</a></li>
-                <li>Electric Utility Provider:<a ng-click="viewVendorDetail(property.ElectricUtilityCompanyId)">{{property.ElectricUtilityCompanyName}}</a></li>
-                <li>Water Utility Provider:<a ng-click="viewVendorDetail(property.WaterUtilityCompanyId)">{{property.WaterUtilityCompanyName}}</a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-4">
-            <h4>Board Members</h4>
-            <div>
-                <ol>
-                    <li ng-repeat="boardmember in boardmembers | filter: property.PropertyId"><a ng-click="viewBoardMemberDetail(boardmember.BoardMemberId)">{{boardmember.Name}}</a></li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <h4>Emergency Reports</h4>
-            <div class="row">
-                <div>
-                    <ol>
-                        <li ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId"><a ng-click="viewEmergencyReportDetail(emergencyreport.EmergencyReportId)">{{emergencyreport.Date}}: {{emergencyreport.IncidentDescription}}</a></li>
-                    </ol>
+    <div class="row" id="propertyDetailRows">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>General Information</h4>
+                    <ul>
+                        <li>Manager: {{property.ManagerName}}</li>
+                        <li>Tax ID: {{property.TaxId}}</li>
+                        <li>Property Type: {{property.PropertyType}}</li>
+                        <li>Number of Buildings: {{property.NumberOfBuildings}}</li>
+                        <li>Number of Units: {{property.NumberOfUnits}}</li>
+                        <li>On Site Contact: {{property.OnSiteContact}}</li>
+                        <li>Water Shut Off Location: {{property.WaterShutOffLocation}}</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div> 
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Location</h4>
+                    <ul>
+                        <li>Property Address: {{property.Address}} </li>
+                        <li>City: {{property.City}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Access, Codes, & Passwords</h4>
+                    <ul>
+                        <li>Fire Alarm Password: {{property.FireAlarmPassword}}</li>
+                        <li>Gate Access Code: {{property.GateAccess}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Vendors</h4>
+                    <ul>
+                        <li>Fire Alarm Vendor:<a ng-click="viewVendorDetail(property.FireAlarmVendorId)">{{property.FireAlarmVendorName}}</a></li>
+                        <li>Insurance Vendor:<a ng-click="viewVendorDetail(property.InsuranceVendorId)">{{property.InsuranceVendorName}}</a></li>
+                        <li>Elevator Vendor:<a ng-click="viewVendorDetail(property.ElevatorVendorId)">{{property.ElevatorVendorName}}</a></li>
+                        <li>Plumbing Vendor:<a ng-click="viewVendorDetail(property.PlumbingVendorId)">{{property.PlumbingVendorName}}</a></li>
+                        <li>Electrical Vendor:<a ng-click="viewVendorDetail(property.ElectricalVendorId)">{{property.ElectricalVendorName}}</a></li>
+                        <li>Gate Vendor: <a ng-click="viewVendorDetail(property.GateVendorId)">{{property.GateVendorName}}</a></li>
+                        <li>Towing Vendor:<a ng-click="viewVendorDetail(property.TowingVendorId)">{{property.TowingVendorName}}</a></li>
+                        <li>Emergency Remediation Vendor:<a ng-click="viewVendorDetail(property.EmergencyRemediationVendorId)">{{property.EmergencyRemediationVendorName}}</a></li>
+                        <li>Electric Utility Provider:<a ng-click="viewVendorDetail(property.ElectricUtilityCompanyId)">{{property.ElectricUtilityCompanyName}}</a></li>
+                        <li>Water Utility Provider:<a ng-click="viewVendorDetail(property.WaterUtilityCompanyId)">{{property.WaterUtilityCompanyName}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Board Members</h4>
+                    <div>
+                        <ol>
+                            <li ng-repeat="boardmember in boardmembers | filter: property.PropertyId"><a ng-click="viewBoardMemberDetail(boardmember.BoardMemberId)">{{boardmember.Name}}</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Emergency Reports</h4>
+                    <div>
+                        <ol>
+                            <li ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId"><a ng-click="viewEmergencyReportDetail(emergencyreport.EmergencyReportId)">{{emergencyreport.Date}}: {{emergencyreport.IncidentDescription}}</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-offset-2 col-xs-4">
             <button name="back" class="btn btn-default" ng-click="back()">Back</button>
         </div>
     </div>
- </div>
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-4">
+            <button name="edit" class="btn btn-primary" ng-click="edit(property.PropertyId)">Edit</button>
+        </div>
+    </div>
+</div>
