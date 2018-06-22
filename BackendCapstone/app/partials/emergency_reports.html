@@ -1,2 +1,23 @@
-﻿<button type="button" class="btn btn-primary btn-lg" ng-click="viewPastReports()">View Past Emergency Incident Reports</button>
-<button type="button" class="btn btn-success btn-lg" ng-click="addNewReport()">Add New Emergency Incident Report</button>
+﻿
+
+
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>View All Filed Reports</h3>
+                <p>Choose this view to sort filed reports by community or view all past reports in a table format.</p>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="viewPastReports()">View Past Reports</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Add New Incident</h3>
+                <p>Click here to add a new emergency report. The report will be emailed to the manager of your choice.</p>
+                <button type="button" class="btn btn-success btn-lg" ng-click="addNewReport()">Add New Report</button>
+            </div>
+        </div>
+    </div>
+</div>

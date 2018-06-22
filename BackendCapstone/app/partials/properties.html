@@ -1,3 +1,29 @@
-﻿<button type="button" class="btn btn-primary btn-lg" ng-click="viewAllProperties()">Select A Property</button>
-<button type="button" class="btn btn-success btn-lg" ng-click="searchAllProperties()">Search All Properties</button>
-<button type="button" class="btn btn-warning btn-lg" ng-click="addNewProperty()">Add New Property</button>
+﻿<div class="row">
+    <div class="col-sm-6 col-md-4" id="propertyCards">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>View All Properties</h3>
+                <p>Click here to view a dropdown list of all properties in the emergency database.</p>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="viewAllProperties()">Select A Property</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4" id="propertyCards">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Search All Properties</h3>
+                <p>Click here to search all properties. Search by any field, including association or manager.</p>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="searchAllProperties()">Search All Properties</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4" id="propertyCards">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Add New Property</h3>
+                <p>Click here to add a new property. Be sure you have added all new vendors first.</p>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="addNewProperty()">Add New Property</button>
+            </div>
+        </div>
+    </div>
+</div>
