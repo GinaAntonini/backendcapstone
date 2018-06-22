@@ -70,19 +70,19 @@
                     <h4>Board Members</h4>
                     <div>
                         <ol>
-                            <li ng-repeat="boardmember in boardmembers | filter: property.PropertyId"><a ng-click="viewBoardMemberDetail(boardmember.BoardMemberId)">{{boardmember.Name}}</a></li>
+                            <li ng-repeat="boardmember in boardmembers | filter: property.PropertyId">{{boardmember.Name}}, {{boardmember.PhoneNumber}}, {{boardmember.EmailAddress}}</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4" id="emergencyReportInPropertyDetail">
             <div class="thumbnail">
                 <div class="caption">
                     <h4>Emergency Reports</h4>
                     <div>
                         <ol>
-                            <li ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId"><a ng-click="viewEmergencyReportDetail(emergencyreport.EmergencyReportId)">{{emergencyreport.Date}}: {{emergencyreport.IncidentDescription}}</a></li>
+                            <li ng-repeat="emergencyreport in emergencyreports | filter: property.PropertyId">{{emergencyreport.Address}}: {{emergencyreport.IncidentDescription}}</li>
                         </ol>
                     </div>
                 </div>
