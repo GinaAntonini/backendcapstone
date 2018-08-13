@@ -174,7 +174,8 @@ namespace BackendCapstone.Services
                                                      ,[EmergencyRemediationVendorId]
                                                      ,[ElectricUtilityCompanyId]
                                                      ,[WaterUtilityCompanyId]
-                                                     ,[AdditionalNotes])
+                                                     ,[AdditionalNotes]
+                                                     ,[LandscapingVendorId])
                                                 VALUES
                                                      (@Name
                                                      ,@AssociationCode
@@ -202,7 +203,8 @@ namespace BackendCapstone.Services
                                                      ,@EmergencyRemediationVendorId
                                                      ,@ElectricUtilityCompanyId
                                                      ,@WaterUtilityCompanyId
-                                                     ,@AdditionalNotes)", property);
+                                                     ,@AdditionalNotes
+                                                     ,@LandscapingVendorId)", property);
                 return records == 1;
             }
         }
@@ -243,6 +245,7 @@ namespace BackendCapstone.Services
                                                      ,[ElectricUtilityCompanyId] = @ElectricUtilityCompanyId
                                                      ,[WaterUtilityCompanyId] = @WaterUtilityCompanyId
                                                      ,[AdditionalNotes] = @AdditionalNotes
+                                                     ,[LandscapingVendorId] = @LandscapingVendorId
                                                      WHERE [Id] = @Id", new
                                                         {
                                                             property.PropertyName,
@@ -272,6 +275,7 @@ namespace BackendCapstone.Services
                                                             property.ElectricUtilityCompanyId,
                                                             property.WaterUtilityCompanyId,
                                                             property.AdditionalNotes,
+                                                            property.LandscapingVendorId,
                                                             id
                                                         });
 

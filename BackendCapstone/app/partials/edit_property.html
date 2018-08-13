@@ -127,6 +127,12 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="property.ElectricalVendorId" class="control-label col-xs-4">Electrical Vendor</label>
+        <div class="col-xs-8">
+            <select class="form-control" id="property.LandscapingVendorId" ng-model="property.LandscapingVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Landscaping'"></select>
+        </div>
+    </div>
+    <div class="form-group">
         <label for="property.GateVendorId" class="control-label col-xs-4">Gate Vendor</label>
         <div class="col-xs-8">
             <select class="form-control" id="property.GateVendorId" ng-model="property.GateVendorId" ng-options="vendor.VendorId as vendor.VendorName for vendor in vendors | filter: vendor.VendorTypeName = 'Gate'"></select>

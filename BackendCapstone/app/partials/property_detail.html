@@ -38,7 +38,8 @@
                     <h4>Access, Codes, & Passwords</h4>
                     <ul>
                         <li>Fire Alarm Password: {{property.FireAlarmPassword}}</li>
-                        <li>Gate Access Code: {{property.GateAccess}}</li>
+                        <li>Gate Access Code: {{property.GateAccessCode}}</li>
+                        <li>Additional Notes: {{property.AdditionalNotes}}</li>
                     </ul>
                 </div>
             </div>
@@ -55,11 +56,14 @@
                         <li>Elevator Vendor:<a ng-click="viewVendorDetail(property.ElevatorVendorId)">{{property.ElevatorVendorName}}</a></li>
                         <li>Plumbing Vendor:<a ng-click="viewVendorDetail(property.PlumbingVendorId)">{{property.PlumbingVendorName}}</a></li>
                         <li>Electrical Vendor:<a ng-click="viewVendorDetail(property.ElectricalVendorId)">{{property.ElectricalVendorName}}</a></li>
+                        <li>Irrigation Vendor:<a ng-click="viewVendorDetail(property.IrrigationVendorId)">{{property.IrrigationVendorName}}</a></li>
+                        <li>Landscaping Vendor:<a ng-click="viewVendorDetail(property.LandscapingVendorId)">{{property.LandscapingVendorName}}</a></li>
                         <li>Gate Vendor: <a ng-click="viewVendorDetail(property.GateVendorId)">{{property.GateVendorName}}</a></li>
                         <li>Towing Vendor:<a ng-click="viewVendorDetail(property.TowingVendorId)">{{property.TowingVendorName}}</a></li>
                         <li>Emergency Remediation Vendor:<a ng-click="viewVendorDetail(property.EmergencyRemediationVendorId)">{{property.EmergencyRemediationVendorName}}</a></li>
                         <li>Electric Utility Provider:<a ng-click="viewVendorDetail(property.ElectricUtilityCompanyId)">{{property.ElectricUtilityCompanyName}}</a></li>
                         <li>Water Utility Provider:<a ng-click="viewVendorDetail(property.WaterUtilityCompanyId)">{{property.WaterUtilityCompanyName}}</a></li>
+                        <li>Landscaping Vendor:<a ng-click="viewVendorDetail(property.LandscapingVendorId)">{{property.LandscapingVendorName}}</a></li>
                     </ul>
                 </div>
             </div>

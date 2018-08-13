@@ -11,6 +11,7 @@ namespace BackendCapstone.Models
     {
         public int VendorId { get; set; }
         public string VendorName { get; set; }
+        public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string ContactName { get; set; }
         public string FieldOfWork { get; set; }

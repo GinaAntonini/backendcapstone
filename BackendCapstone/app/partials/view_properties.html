@@ -3,7 +3,7 @@
 <div class="form-group mt-3">
     <select class="form-control input-lg" id="viewPropertyDetail" ng-model="property.PropertyId" required>
         <option value="" disabled selected>Select Property to View</option>
-        <option ng-repeat="property in properties" value="{{property.PropertyId}}">{{property.PropertyName}}</option>
+        <option ng-repeat="property in properties | orderBy: 'PropertyName'" value="{{property.PropertyId}}">{{property.PropertyName}}</option>
     </select>
 </div>
 <div class="row">

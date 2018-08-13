@@ -39,6 +39,7 @@ namespace BackendCapstone.Models
         public string ElectricUtilityCompanyName { get; set; }
         public string WaterUtilityCompanyName { get; set; }
         public string FireAlarmVendorName { get; set; }
+        public string LandscapingVendorName { get; set; }
         public int FireAlarmVendorId { get; set; }
         public int InsuranceVendorId { get; set; }
         public int ElevatorVendorId { get; set; }
@@ -49,6 +50,7 @@ namespace BackendCapstone.Models
         public int EmergencyRemediationVendorId { get; set; }
         public int ElectricUtilityCompanyId { get; set; }
         public int WaterUtilityCompanyId { get; set; }
+        public int LandscapingVendorId { get; set; }
         public string AdditionalNotes { get; set; }
 
     }
