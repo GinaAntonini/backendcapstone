@@ -23,7 +23,7 @@
             $scope.emergencyreports = result.data;
         });
 
-        $http.get(`api/boardmembers?type=${$routeParams.id}`).then(function (result) {
+        $http.get(`api/boardmembers?type=${$routeParams.propertyId}`).then(function (result) {
             $scope.boardmembers = result.data;
         });
     }

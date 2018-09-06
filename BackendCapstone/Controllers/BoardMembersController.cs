@@ -42,10 +42,10 @@ namespace BackendCapstone.Controllers
         }
 
         [Route(""), HttpGet]
-        public HttpResponseMessage GetBoardMembersByProperty(string property)
+        public HttpResponseMessage GetBoardMembersByProperty(int propertyId)
         {
             var repository = new BoardMembersRepository();
-            var result = repository.ListAllBoardMembers().Where(bm => bm.PropertyName == property);
+            var result = repository.ListAllBoardMembers().Where(bm => bm.PropertyId == propertyId);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }

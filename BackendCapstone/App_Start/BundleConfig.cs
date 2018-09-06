@@ -28,6 +28,10 @@ namespace BackendCapstone
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-route.js",
                       "~/app/app.js").IncludeDirectory("~/app/controllers", "*.js", true));
+
+
+
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

@@ -2,7 +2,7 @@
 
     $scope.viewAllProperties = () => {
         $location.path(`/properties/viewproperties`);
-    }
+    };
 
     $scope.searchAllProperties = () => {
         $location.path(`/properties/search`);

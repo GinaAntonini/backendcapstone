@@ -21,7 +21,7 @@
     <div class="form-group">
         <label for="EmergencyReport.PropertyName" class="control-label col-xs-4">Property Name</label>
         <div class="col-xs-8">
-            <select class="form-control" id="EmergencyReport.PropertyName" ng-model="EmergencyReport.PropertyId" ng-options="property.PropertyId as property.PropertyName for property in properties"></select>
+            <select class="form-control" id="EmergencyReport.PropertyName" ng-model="EmergencyReport.PropertyId" ng-options="property.PropertyId as property.PropertyName for property in properties | orderBy: 'PropertyName'"></select>
         </div>
     </div>
     <div class="form-group">
