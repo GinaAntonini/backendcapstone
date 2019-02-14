@@ -24,6 +24,13 @@ namespace BackendCapstone.Models
         public int NumberOfUnits { get; set; }
         public string GateAccessCode { get; set; }
         public string FireAlarmPassword { get; set; }
+        public string ElectricalRoomCode { get; set; }
+        public string LockboxCode { get; set; }
+        public string CallboxCode { get; set; }
+        public string PackageRoomCode { get; set; }
+        public string ElevatorRoomCode { get; set; }
+        public string PoolRoomCode { get; set; }
+        public string PumpRoomCode { get; set; }
         public string OnSiteContact { get; set; }
         public string WaterShutOffLocation { get; set; }
         public string RoofType { get; set; }

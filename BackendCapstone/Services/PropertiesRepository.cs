@@ -29,6 +29,13 @@ namespace BackendCapstone.Services
                                                                           ,[NumberOfUnits]
                                                                           ,[GateAccessCode]
                                                                           ,[FireAlarmPassword]
+                                                                          ,[ElectricalRoomCode]
+                                                                          ,[LockboxCode]
+                                                                          ,[CallboxCode]
+                                                                          ,[PackageRoomCode]
+                                                                          ,[ElevatorRoomCode]
+                                                                          ,[PoolRoomCode]
+                                                                          ,[PumpRoomCode]
                                                                           ,[OnSiteContact]
                                                                           ,[WaterShutOffLocation]
                                                                           ,[RoofType]
@@ -92,6 +99,13 @@ namespace BackendCapstone.Services
                                                                           ,[NumberOfUnits]
                                                                           ,[GateAccessCode]
                                                                           ,[FireAlarmPassword]
+                                                                          ,[ElectricalRoomCode]
+                                                                          ,[LockboxCode]
+                                                                          ,[CallboxCode]
+                                                                          ,[PackageRoomCode]
+                                                                          ,[ElevatorRoomCode]
+                                                                          ,[PoolRoomCode]
+                                                                          ,[PumpRoomCode]
                                                                           ,[OnSiteContact]
                                                                           ,[WaterShutOffLocation]
                                                                           ,[RoofType]
@@ -159,6 +173,13 @@ namespace BackendCapstone.Services
                                                      ,[NumberOfUnits]
                                                      ,[GateAccessCode]
                                                      ,[FireAlarmPassword]
+                                                     ,[ElectricalRoomCode]
+                                                     ,[LockboxCode]
+                                                     ,[CallboxCode]
+                                                     ,[PackageRoomCode]
+                                                     ,[ElevatorRoomCode]
+                                                     ,[PoolRoomCode]
+                                                     ,[PumpRoomCode]
                                                      ,[OnSiteContact]
                                                      ,[WaterShutOffLocation]
                                                      ,[RoofType]
@@ -188,6 +209,13 @@ namespace BackendCapstone.Services
                                                      ,@NumberOfUnits
                                                      ,@GateAccessCode
                                                      ,@FireAlarmPassword
+                                                     ,@ElectricalRoomCode
+                                                     ,@LockboxCode
+                                                     ,@CallboxCode
+                                                     ,@PackageRoomCode
+                                                     ,@ElevatorRoomCode
+                                                     ,@PoolRoomCode
+                                                     ,@PumpRoomCode
                                                      ,@OnSiteContact
                                                      ,@WaterShutOffLocation
                                                      ,@RoofType
@@ -229,6 +257,13 @@ namespace BackendCapstone.Services
                                                      ,[NumberOfUnits] = @NumberOfUnits
                                                      ,[GateAccessCode] = @GateAccessCode
                                                      ,[FireAlarmPassword] = @FireAlarmPassword
+                                                     ,[ElectricalRoomCode] = @ElectricalRoomCode
+                                                     ,[LockboxCode] = @LockboxCode
+                                                     ,[CallboxCode] = @CallboxCode
+                                                     ,[PackageRoomCode] = @PackageRoomCode
+                                                     ,[ElevatorRoomCode] = @ElevatorRoomCode
+                                                     ,[PoolRoomCode] = @PoolRoomCode
+                                                     ,[PumpRoomCode] = @PumpRoomCode
                                                      ,[OnSiteContact] = @OnSiteContact
                                                      ,[WaterShutOffLocation] = @WaterShutOffLocation
                                                      ,[RoofType] = @RoofType
@@ -259,6 +294,13 @@ namespace BackendCapstone.Services
                                                             property.NumberOfUnits,
                                                             property.GateAccessCode,
                                                             property.FireAlarmPassword,
+                                                            property.ElectricalRoomCode,
+                                                            property.LockboxCode,
+                                                            property.CallboxCode,
+                                                            property.PackageRoomCode,
+                                                            property.ElevatorRoomCode,
+                                                            property.PoolRoomCode,
+                                                            property.PumpRoomCode,
                                                             property.OnSiteContact,
                                                             property.WaterShutOffLocation,
                                                             property.RoofType,
