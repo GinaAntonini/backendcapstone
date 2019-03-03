@@ -66,12 +66,14 @@ namespace BackendCapstone.Services
                                                  ([Name]
                                                  ,[PhoneNumber]
                                                  ,[ContactName]
-                                                 ,[FieldOfWork])
+                                                 ,[FieldOfWork]
+                                                 ,[VendorTypeId])
                                             VALUES
                                                  (@Name
                                                  ,@PhoneNumber
                                                  ,@ContactName
-                                                 ,@FieldOfWork)", vendor);
+                                                 ,@FieldOfWork
+                                                 ,@VendorTypeId)", vendor);
                 return records == 1;
             }
         }
